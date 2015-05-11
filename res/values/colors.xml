@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="listview_divider">#ff999999</color>
+    <color name="light_gray_divider">#ffeeeeee</color>
+    <color name="gray">#ffcccccc</color>
+    <color name="gray_semitransparent">#cccccccc</color>
+    <color name="light_gray">#ffeeeeee</color>
+    <color name="light_gray1">#ffe0e0e0</color>
+    <color name="light_gray2">#fff2f2f2</color>
+    <color name="light_gray3">#ffe2e2e2</color>
+    <color name="light_gray4">#ffcecece</color>
+    <color name="light_gray5">#ffb5b5b5</color>
+    <color name="light_gray6">#ff959595</color>
+    <color name="light_gray_floating">#dcdcdc</color>
+    <color name="light_gray7">#ffd3d3d3</color>
+    <color name="light_gray8">#ffcdc9c4</color>
+    <color name="light_gray_semitransparent">#cceeeeee</color>
+    <color name="black_overlay">#60000000</color>
+    <color name="dark_gray">#ff999999</color>
+    <color name="dark_yellow">#ffb71c</color>
+
+    <color name="black">#ff000000</color>
+    <color name="btn_gray_normal">#FFF9F9F9</color>
+
+    <color name="black_normal">#cc000000</color>
+    <color name="black_pressed">#ff000000</color>
+    <color name="black_disabled">#898989</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="white_normal">#eeffffff</color>
+    <color name="white_pressed">#ffffffff</color>
+    <color name="white_disabled">#66ffffff</color>
+    <color name="upgrade_item_desc_bg">#FFE5E5E5</color>
+    <color name="top_nav_bg">#D5ffffff</color>
+    <color name="orange_text">#ff8800</color>
+
+    <color name="black_semitransparent">#99000000</color>
+    <color name="light_black">#ff262626</color>
+    <color name="light_black2">#ff666666</color>
+
+    <color name="light_black_semitransparent">#99333333</color>
+
+    <color name="flicker_color_orange_90">#e6FF7200</color>
+    <color name="tab_orange">#FFFF6501</color>
+    <color name="tab_orange_act">#fec92f</color>
+    <color name="oringe">#FFFF7200</color>
+    <color name="dark_oringe">#ffff6600</color>
+    <color name="top_nav_indicator_color">#FA9912</color>
+    <color name="top_nav_tips_num_color">#FF8400</color>
+    <color name="bottom_text_color">#626262</color>
+    <color name="bottom_text_shadow_color">#ffffff</color>
+
+    <color name="transparent">#65000000</color>
+    <color name="transparent_30">#77000000</color>
+    <color name="transparent_35">#90000000</color>
+    <color name="transparent_white_50">#7FFFFFFF</color>
+    <color name="transparent_70">#b2000000</color>
+    <color name="transparent_90_b1">#e61b1b1b</color>
+    <color name="transparent_00">#00000000</color>
+    <color name="transparent_imagebrowser">#D000</color>
+    <color name="packet_download_item_bg">#2D2D2D</color>
+    <color name="packet_download_bg">#ff282828</color>
+    <color name="user_guide_bg">#ff272727</color>
+
+
+    <color name="green_start">#ffA1B492</color>
+    <color name="green_center">#ff5EAC36</color>
+    <color name="green_end">#ff49A329</color>
+
+    <color name="sdcard_info_bg">#EFEFEF</color>
+
+    <color name="orange_processbar_process">#FF6100</color>
+    <color name="orange_processbar_backgroud">#E1E1E1</color>
+
+    <color name="bottom_pressed">#b5b5b7</color>
+
+    <color name="circular_progress_background1">#52ffffff</color>
+    <color name="circular_progress_background">#90000000</color>
+    <color name="circular_progress_process">#f59e37</color>
+
+    <drawable name="color_drwable_list_divider">@color/light_gray3</drawable>
+    <drawable name="color_drwable_list_item_pressed">#feee</drawable>
+
+    <drawable name="transparent">#00000000</drawable>
+
+    <drawable name="listview_item_color_drwable">@color/light_gray</drawable>
+    <drawable name="listview_item_color_drwable_pressed">@color/light_black</drawable>
+
+    <color name="listview_item_bg_press">#19000000</color>
+
+    <color name="side_menu_bg_1">#303032</color>
+    <color name="side_menu_bg_2">#373739</color>
+    <color name="side_menu_bg_line">#2c2c2d</color>
+    <color name="side_bottom_bg_pressed">#323236</color>
+    <color name="side_bottom_bg">#3b3b3f</color>
+    <color name="side_bottom_bg_line">#121213</color>
+    <color name="side_menu_listview_item_text_color">#afafb3</color>
+
+    <color name="round_rect_stroke_color">#d5d7d7</color>
+    <color name="round_rect_solid_color_pressed">#f6f6f6</color>
+
+    <color name="dialog_page_background">#80000000</color>
+
+    <color name="recommend_file_length">#ff7200</color>
+
+    <!-- 内页背景色 -->
+    <color name="inner_bg_white">#ffffffff</color>
+    <!-- 我的游戏- -->
+    <!-- 遮罩色 -->
+    <color name="mygame_mask_white">#E5ffffff</color>
+    <!-- 菜单选中 -->
+    <color name="mygame_menu_bg">#E45532</color>
+    <!-- 菜单item选中 -->
+    <color name="mygame_menu_item_press">#f7982a</color>
+    <!-- 菜单item -->
+    <color name="mygame_menu_item">#ffb71c</color>
+    <!-- 列表app名字 -->
+    <color name="mygame_listview_item_app_name">#f333</color>
+    <!-- upgrade_game_button_bg -->
+    <color name="mygame_upgrade_btn_bg">#89C43C</color>
+    <!-- upgrade_game_button_bg_press -->
+    <color name="mygame_upgrade_btn_bg_press">#7bb036</color>
+    <!-- 页面顶部标题文字 -->
+    <color name="nav_title_text_color">#333333</color>
+    <color name="nav_title_text_color_2">#898989</color>
+    <color name="nav_title_text_color_3">#666666</color>
+
+
+    <color name="assistant_item_bolder_color">#D2D2D2</color>
+
+    <color name="assistant_bg_color_1">#E45532</color>
+    <color name="assistant_bg_color_2">#FE8500</color>
+    <color name="assistant_bg_color_3">#FEB53F</color>
+
+    <color name="assistant_default_img_bg_color">#f3f3f3</color>
+
+    <color name="toast_content_text_color">#d2d2d2</color>
+    <color name="toast_content_text_second_color">#ff8800</color>
+
+    <color name="home_page_bg">#eeeeee</color>
+    <color name="home_page_inner_panel">#eeeeee</color>
+
+    <color name="login_dialog_title_color">#ff8400</color>
+
+    <!--add in 2.5.0 homepage opt start-->
+    <color name="home_page_list_header_bg">#fff5f5f5</color>
+    <color name="home_page_list_header_text">#ff666666</color>
+    <color name="home_page_list_item_text">#ff313131</color>
+    <color name="upgrade_box_text_color">#ff656565</color>
+    <color name="upgrade_box_divider_background">#ffdadada</color>
+
+    <color name="home_page_720p_text_color_1">#ff333333</color>
+    <color name="home_page_720p_text_color_2">#ff666666</color>
+    <color name="home_page_720p_text_color_3">#ff898989</color>
+    <color name="home_page_720p_text_color_4">#ffb5b5b5</color>
+    <!--add in 2.5.0 homepage opt end-->
+
+    <color name="recommend_key_word_color">#333333</color>
+
+    <!-- special native button -->
+    <color name="category_rank_button_gray" >#fffafafa</color>
+    <color name="category_rank_text_rank_selected" >#ff45c8c5</color>
+    <color name="category_rank_text_category_selected" >#ffffba00</color>
+    <!-- special native button -->
+    
+    <color name="oauth_dialog_bg">#99000000</color>
+    
+    <!-- The default background of the menu. -->
+    <color name="md__defaultBackground">#FF555555</color>
+    
+    <color name="comment_dialog_btn_color">#ff8800</color>
+    <color name="comment_dialog_btn_color_disabled">#bfbfbf</color>
+    <color name="red_icon_color">#ffff5927</color>
+    <color name="divider_line_color">#eeeeee</color>
+
+    <color name="floating_close_window_text_color">#ffffff</color>
+    <color name="floating_close_window_text_color_foucs">#ff5f2f</color>
+
+    <color name="floating_msg_window_btn_color">#ffffff</color>
+    <color name="floating_msg_window_btn_color_press">#e0e0e0</color>
+
+    <!-- gallery -->
+    <color name="background_transfer_dark">#66000000</color>
+    <color name="color_e43">#ffe43601</color>
+    <color name="color_e6">#ffe6e6e6</color>
+    <color name="color_e0">#e0e0e0</color>
+
+    <color name="forum_category_selected">#ffff8000</color>
+
+    <color name="common_grey_bg">#eeeeee</color>
+    <color name="main_page_open_test_special_text_color">#ff8800</color>
+
+    <color name="guild_popup_menu_item_color_pressed">#eeeeee</color>
+    <color name="guild_popup_menu_item_color">#ffffff</color>
+    
+    <color name="guild_member_menu_divider">#ffffa100</color>
+    <color name="guild_member_menu_bg">#ffffb028</color>
+    <color name="guild_usage_tips_color">#1ac269</color>
+    
+    <color name="setting_item_title_text_color">#666666</color>
+    <color name="setting_item_option_value_text_color">#666666</color>
+    
+    <!-- guild modify password -->
+    <color name="guild_error_tips_text_color">#ee3f16</color>
+    <color name="guild_error_forget_password_text_color">#ff8800</color>
+    
+    <color name="guild_divider_line_color">#d3d3d3</color>
+    
+    <color name="guild_info_name_id_text_color">#ffffff</color>
+    
+    <color name="guild_info_level_text_color">#898989</color>
+    
+    <color name="guild_info_head_text_color">#898989</color>
+    
+    <color name="guild_info_edit_text_hints_color">#898989</color>
+    <color name="guild_join_refund_history_color">#ff683d</color>
+    
+    <color name="forum_post_detail_reply_author_color">#FF1A71DE</color>
+    <color name="forum_list_reply_author_color">#ff999999</color>
+    <color name="forum_list_reply_context_color">#ff666666</color>
+    <color name="post_detail_resend">#ff1b73da</color>
+
+    <color name="guild_modify_password_text_color">#ff333333</color>
+    <!--dropwater-->
+    <color name="drop_water_tip_color">#BCBCBC</color>
+    <color name="drop_water_drawcolor">#FFBD2A</color>
+
+    <!-- The default color of the text. -->
+    <color name="default_text_color">#b5b5b5</color>
+
+    <color name="list_view_divider_color">#dcdcdc</color>
+
+    <color name="guild_topic_comment_author_color">#488ddb</color>
+    <color name="guild_topic_comment_content_color">#333333</color>
+    <color name="guild_topic_comment_content_bg_color">#f3f3f3</color>
+    <color name="guild_topic_comment_divider_color">#d3d3d3</color>
+    <color name="guild_topic_comment_count_color">#666666</color>
+    <color name="guild_topic_comment_count_checked_color">#ff8800</color>
+    <color name="link_text_color">#488dbb</color>
+    <color name="link_text_color_pressed">#ff05c5cf</color>
+    <color name="menu_header_bg">#fff99722</color>
+    <color name="menu_bg2">#FFF3F3F3</color>
+    <color name="menu_cancel_color">#FF898989</color>
+    <color name="action_mode_background">#dcdcdc</color>
+    <color name="guild_find_password_success_high_light">#ee3f16</color>
+</resources>

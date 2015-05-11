@@ -1,0 +1,1315 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="app_name">电话本</string>
+    <string name="launch_name">电话本</string>
+    <string name="mygame_name">我的游戏</string>
+    <string name="download_service_name">核心服务</string>
+    <string name="upgrade_download_service_name">版本升级服务</string>
+    <string name="download_manager">下载管理</string>
+    <string name="info">消息</string>
+    <string name="more">更多</string>
+    <!--API地址配置已经移到src/cn/ninegame/gamemanager/net/host/ApiHost.java-->
+    <!--<string name="api_host">http://a.test9.9game.cn:8030</string>-->
+    <!--<string name="test_api_host">http://a.test9.9game.cn:8030</string>-->
+
+    <string name="vip_url">http://gpom.test10.9game.cn:9042</string>
+    <!--<string name="account_test_api_host">sdk.test7.g.uc.cn:8055</string>-->
+    <!--
+    a.test9.9game.cn:8091
+    a.test9.9game.cn:8038
+    sdk.dev2.g.uc.cn
+    -->
+    <string name="server_app_flag">0</string>
+    <string name="server_app_name">jy_gamemanager</string>
+    <string name="about">九游 v2.16.2(build_1410221949)\n官网: http://9game.cn</string>
+    <string name="build">1410221949</string>
+    <!--活动版本标识，普通版本为0-->
+    <string name="activity_id">0</string>
+    <!--is_start_task：高速下载、自动领礼包、自动关注 这些功能都需要把这个参数设成true -->
+    <string name="is_start_task">false</string>
+    <integer name="send_stat_interval">120000</integer>
+    <integer name="send_stat_long_interval">480000</integer>
+    <integer name="notifications_interval">3600000</integer>
+    <string name="folderchoose_title1">玩家必读</string>
+    <string name="folderchoose_title2">安装路径</string>
+    <string name="folderchoose_title3">新建目录</string>
+    <string name="main_page_home">首页</string>
+    <string name="main_page_cat">分类榜单</string>
+    <string name="main_page_rank">排行</string>
+    <string name="main_page_user">我</string>
+    <string name="discovery_page_title">发现</string>
+    <string name="main_page_forum">论坛</string>
+    <string name="main_page_netgame">网游</string>
+    <string name="main_page_discovery">发现</string>
+    <string name="main_page_special">专辑</string>
+    <string name="main_page_search">搜索</string>
+    <string name="feedback_content_hint">不好的地方请告诉我们，好的地方请告诉你的朋友。九游将努力为你变好变强大！</string>
+    <string name="feedback_email_hint">好的意见可能会收到我们的回复哦</string>
+    <string name="pause">暂停</string>
+    <string name="open_server_open_test">开服开测</string>
+    <string name="open_test">开测</string>
+    <string name="open_server">开服</string>
+    <string name="dispatcher_center">发号中心</string>
+    <string name="get_gift">抢礼包</string>
+    <string name="resume">继续</string>
+    <string name="install">安装</string>
+    <string name="uninstall">卸载</string>
+    <string name="delete">删除</string>
+    <string name="launch">打开</string>
+    <string name="retry">重试</string>
+    <string name="refresh">刷新</string>
+    <string name="refresh_success">刷新成功</string>
+    <string name="refresh_complete">刷新完成</string>
+    <string name="download_text">下载</string>
+    <string name="downloading">下载中</string>
+    <string name="downloading_hijack_restart_task">侦测到下载劫持,准备重新下载</string>
+    <string name="waiting_for_download">等待下载</string>
+    <string name="init_for_download">启动下载中</string>
+    <string name="stopped">已暂停</string>
+    <string name="not_installed">未安装</string>
+    <string name="installing">安装中</string>
+    <string name="extracting">解包中</string>
+    <string name="extracting_tips">数据包解包中</string>
+    <string name="extracting_error">解包失败</string>
+    <string name="install_error">安装失败</string>
+    <string name="download_error">下载出错</string>
+    <string name="edit">编辑</string>
+    <string name="selectAll">全选</string>
+    <string name="un_selectAll">取消全选</string>
+    <string name="open">打开</string>
+    <string name="need_upgrade">升级</string>
+    <string name="download">下  载</string>
+    <string name="upgrade">更新</string>
+    <string name="updating">更新中</string>
+    <string name="ignore">忽略</string>
+    <string name="ignore_cancel">取消忽略</string>
+    <string name="upgrade_all">全部更新</string>
+    <string name="ignore_upgrade">已忽略更新</string>
+    <string name="can_upgrade">已忽略更新</string>
+    <string name="will_open">即将开放</string>
+    <string name="upgrade_listview_item_title_now">当前 : </string>
+    <string name="upgrade_listview_item_title_new">新版 : </string>
+    <string name="upgrade_listview_item_interval">|</string>
+    <string name="more_upgrade_tv_empty_notice">你的游戏都是最新版，继续保持哦!</string>
+    <string name="more_pkgs_tv_empty_notice">没有安装包, 快去下载吧</string>
+    <string name="more_game_empty_notice">没有游戏，快去下载吧</string>
+    <string name="more_my_games_upgrade_notice">没有安装游戏, 快去下载吧</string>
+    <string name="more_packet_manager_tv_empty_notice">没有游戏数据包可清理</string>
+    <string name="more_favorite_tv_empty_notice">没有收藏,遇到喜欢的游戏可收藏到这里~</string>
+    <string name="more_my_book_gift_tv_empty_notice">预订享受优先领号特权哦，快去预订吧!</string>
+    <string name="more_my_got_gift_tv_empty_notice">手快有手慢无，快去领取珍贵礼包!</string>
+    <string name="more_my_dredge_gift_tv_empty_notice">未淘到任何礼包，一大波礼包正在等着你!</string>
+    <string name="more_bookmark_tv_empty_notice">没有收藏,遇到实用的信息可收藏到这里~</string>
+    <string name="more_packet_network_unavailable_notice">网络连接失败</string>
+    <string name="more_packet_network_unavailable_notice_click">网络连接失败，点击重试</string>
+    <string name="network_load_err">加载失败</string>
+    <string name="network_load_err_click">加载失败，点击重试</string>
+    <string name="more_pkgs_exception_notice">扫描失败</string>
+    <string name="more_pkgs_stop_scanning">扫描暂停，再按一次返回</string>
+    <string name="side_bottom_upgrade">检查更新</string>
+    <string name="side_bottom_upgrade_title">最后更新时间</string>
+    <string name="space_manager_scanning">正在扫描中,按手机返回键停止扫描</string>
+    <string name="packet_manager_scanning">正在扫描中</string>
+    <string name="pkgs_storage_path">安装包存储路径：/sdcard/Android/data/cn.ninegame.gamemanager/files/Download/apks</string>
+    <string name="more_gift_clear_data_notice">【温馨提示】系统清除九游游戏数据可能会清空礼包；若有礼包问题请致电九游客服 020-66311900</string>
+    <string name="my_gift_exchange_valid">兑奖期限:\n%1$s 到 %2$s</string>
+    <string name="copy">复制</string>
+    <string name="copy_succeed">复制成功</string>
+    <string name="my_gift_transfer_notice">已提交游戏资料，登陆游戏即可</string>
+    <string name="my_gift_valid">已过期</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="my_gift_delete_count">删除礼包(%1$d)</string>
+    <string name="friendly_tips">温馨提示</string>
+    <string name="my_gift_delete_alert_msg">礼包删除后将无法找回，确定删除？</string>
+    <string name="sliding_menu_packet_manager">安装包管理</string>
+    <string name="sliding_menu_data_packet_manager">数据包管理</string>
+    <string name="sliding_menu_my_gift">存号箱</string>
+    <string name="sliding_menu_my_follow">我的关注</string>
+    <string name="sliding_menu_network_monitor">流量监控</string>
+    <string name="sliding_menu_favorite">收藏夹</string>
+    <string name="sliding_menu_favorite_game">游戏</string>
+    <string name="sliding_menu_favorite_bookmark">书签</string>
+    <string name="sliding_menu_feedback">意见反馈</string>
+    <string name="sliding_menu_about">关于</string>
+    <string name="interested_game_no_summary">暂无最新动态</string>
+    <string name="welcome_to_ninegame">九游精选必玩游戏</string>
+    <string name="welcome_to_ninegame_tips">我们为你准备了时下最火爆的游戏，快来试试吧！</string>
+    <string name="welcome_to_ninegame_btn_skip">跳过</string>
+    <string name="welcome_to_ninegame_btn_download">一键下载</string>
+    <string name="welcome_to_ninegame_mark">已选择%1$d款游戏，共</string>
+    <string name="welcome_to_ninegame_mark2">当前处在WiFi环境，放心下载吧!</string>
+    <string name="test_setting">测试设置</string>
+    <string name="test_input_prompt">输入\"123\" 进入设置页面</string>
+    <string name="other">其他</string>
+    <string name="mygame_menu_detail">专区</string>
+    <string name="mygame_menu_special">专题</string>
+    <string name="mygame_menu_gift">礼包</string>
+    <string name="mygame_menu_strategies">攻略</string>
+    <string name="mygame_menu_bbs">论坛</string>
+    <string name="mygame_menu_uninstall">卸载</string>
+    <string name="mygame_menu_delete">删除</string>
+    <string name="mygame_menu_play_times">玩了 : </string>
+    <string name="mygame_menu_play_times_none">还未体验过，小伙伴喊你一起玩</string>
+    <string name="mygame_menu_network_monitor_none">未消耗任何流量</string>
+    <string name="mygame_empty_tips_play_games">还未体验任何游戏，快去下载吧</string>
+    <string name="mygame_empty_tips_download_manager">马上下载，享受极速下载快感</string>
+    <string name="mygame_empty_tips_upgrade_games">你的游戏都是最新版，继续保持哦</string>
+    <string name="mygame_upgrade_game_updating">更新中，可到"下载管理"查看</string>
+    <string name="mygame_download_manager_state_tips_added_queue">队列中，WiFi下自动下载</string>
+    <string name="mygame_download_manager_state_tips_wait_download">等待下载(最多同时2个)</string>
+    <string name="mygame_download_manager_state_tips_auto_pause">已暂停(网络中断)</string>
+    <string name="mygame_download_manager_state_completed">下载完成</string>
+    <string name="download_record_error_state_retry_failed">重试失败(稍后再试)</string>
+    <string name="download_record_error_state_retry_network_unavailable">重试失败(网络中断)</string>
+    <string name="download_record_error_state_extract_failed">数据包解压失败</string>
+    <string name="download_record_error_state_extract_failed_no_space">数据包解压失败(存储空间不足)</string>
+    <string name="download_record_error_state_install_failed">安装失败，请重试</string>
+    <string name="download_record_error_state_not_wifi">已暂停(网络中断)</string>
+    <string name="mygame_nav_top_item_name_1">玩游戏</string>
+    <string name="mygame_nav_top_item_name_2">下载管理</string>
+    <string name="mygame_nav_top_item_name_3">游戏更新</string>
+    <string name="assistant_text">攻略宝典</string>
+    <string name="assistant_detail_text">攻略详情</string>
+    <string name="assistant_hide_btn_text">隐藏</string>
+    <string name="assistant_go_btn_text">去九游</string>
+    <string name="assistant_close_btn_text">永久关闭攻略助手</string>
+    <string name="assistant_close_tips_text">可在九游客户端-设置中开启</string>
+    <string name="close">关闭</string>
+    <string name="pkgs_tips_text">共%1$s个安装包，占用%2$s空间。</string>
+    <string name="packet_tips_text">共%1$s个数据包，占用%2$s空间。</string>
+    <string name="pkgs_start_silent_install_tips_text">%1$s开始安装。</string>
+    <string name="pkgs_btn_delete_text">删除(%1$s)</string>
+    <string name="loading_text">加载中...</string>
+    <string name="network_unavailable">当前网络不可用</string>
+    <string name="quick_download_start_text">%1$s高速下载中!</string>
+    <string name="quick_download_complete_text">%1$s下载完成</string>
+    <string name="quick_download_open_title_text">%1$s已安装,可以直接打开</string>
+    <string name="quick_download_install_title_text">%1$s已下载,可以直接安装</string>
+    <string name="quick_download_save_text">本次为你节省</string>
+    <string name="head_lines">头条</string>
+    <string name="recommend_per_day">每日一荐</string>
+    <string name="recommend_detail">往期推荐</string>
+    <string name="daily_boutique">每日精品</string>
+    <string name="past_boutique">往期精品</string>
+    <string name="hot_games">热门游戏</string>
+    <string name="hot_games_descrip">%1$s人下载了这里的游戏</string>
+    <string name="new_games">新游推荐</string>
+    <string name="new_games_descrip">跟上潮流，玩最新游戏</string>
+    <string name="online_games_rank">网游排行</string>
+    <string name="online_games_rank_descrip">妈妈不担心没人陪我玩游戏</string>
+    <string name="open_test_games">开测</string>
+    <string name="new_game_except">新游期待榜</string>
+    <string name="title_rank_num">排名</string>
+    <string name="title_game">游戏</string>
+    <string name="title_hot_value">热度值</string>
+    <string name="title_expect_value">期待值</string>
+    <string name="comment_total">%1$s条评论</string>
+    <string name="minute">分钟</string>
+    <string name="today">今日</string>
+    <string name="followed">已关注</string>
+    <string name="follow">关注</string>
+    <string name="cancel_follow">取消关注</string>
+    <string name="following">关注</string>
+    <string name="unfollowing">已关注</string>
+    <string name="acti_code">激活码</string>
+    <string name="follow_success">关注成功</string>
+    <string name="follow_notice">游戏新动态提醒请留意通知栏消息。</string>
+    <string name="follow_notice_desc">游戏动态包括：游戏开放下载、开测、礼包等。</string>
+    <string name="know">我知道了</string>
+    <string name="exit_with_download">亲，还有未完成的下载任务，真的要走吗？</string>
+    <string name="exit_with_download_ok">走</string>
+    <string name="exit_with_download_cancel">不走了</string>
+    <string name="exit_app_text">退出九游</string>
+    <string name="exit_app_content">亲，真的要走吗？再玩一会吧。</string>
+    <string name="exit_app_ok">不玩了</string>
+    <string name="exit_app_cancel">再玩一会</string>
+    <string name="already_start_nine_game">已经启动九游.</string>
+    <string name="share_nine_game_content">我在九游发现了一款好玩的游戏-%1$s，一起来玩吧！快来%2$s哦：%3$s</string>
+    <string name="upgrade_failed">%1$s下载失败, 请确认网络正常后重试.</string>
+    <string name="upgrade_content_ok">闪电升级</string>
+    <string name="upgrade_content_cancel">下次一定升</string>
+    <string name="nettrace_tips">产品经理收到，马上改~</string>
+
+    <string name="ng_prompt">九游温馨提示</string>
+    <string name="open_detail">查看详情</string>
+    <string name="download_now">立刻下载</string>
+    <string name="slient_install_dialog_title">启用静默安装</string>
+    <string name="slient_install_dialog_content">安装游戏时无需确认，一键完成。是否启用？（在设置中可以取消）</string>
+    <string name="slient_install_dialog_ok">立即启用</string>
+    <string name="slient_install_dialog_cancel">暂不启用</string>
+	<string name="assign">分配</string>
+    <string name="end_state">结束</string>
+    <string name="success">成功</string>
+
+    <!-- 2.1.0 Add -->
+    <string name="verify">验证</string>
+    <string name="bind">绑定</string>
+    <string name="verify_success">验证成功</string>
+    <string name="mobile_no_network">没有网络！</string>
+    <string name="phone_num_invalid">请输入正确的手机</string>
+    <string name="onekey_register">一键注册</string>
+    <string name="enter_phone_number">请输入手机号</string>
+    <string name="can_input_new_phone_number">可输入新手机号</string>
+    <string name="enter_verivy_code">请输入验证码</string>
+    <string name="enter_verivy_code_below">请输入以下验证码</string>
+    <string name="getting_verivy_code">获取中</string>
+    <string name="send_sms_code">发送验证码</string>
+    <string name="get_sms_code">获取验证码</string>
+    <string name="resend_sms">重新发送(59)</string>
+    <string name="reget_sms">重新获取(%1$d)</string>
+    <string name="get_verify_code_failed">获取验证码失败</string>
+    <string name="verify_password_failed">密码验证失败</string>
+    <string name="send_verify_code_failed">验证超时，请稍后重试</string>
+    <string name="login">登录</string>
+    <string name="login_by_uc_account">UC号登录</string>
+    <string name="login_by_phone_number">手机号登录</string>
+    <string name="login_account_input_hint">UC帐号/手机号/邮箱</string>
+    <string name="current_password">当前密码</string>
+    <string name="change_password">修改密码</string>
+    <string name="switching_account">切换账号</string>
+    <string name="login_pwd_input_hint">请输入密码</string>
+    <string name="input_current_password">请输入当前密码</string>
+    <string name="new_password">新密码</string>
+    <string name="word_or_num_from_six_to_twenty">6-20位字母或数字</string>
+    <string name="input_again">重新输入</string>
+    <string name="forget_password">忘记密码？</string>
+    <string name="login_immediately">立即登录</string>
+    <string name="back_to_login">返回登录</string>
+    <string name="complete_register">完成注册</string>
+    <string name="login_comply_with">登录即遵守</string>
+    <string name="uc_terms_service">UC服务条款</string>
+    <string name="more_personal_privilege_for_stay">更多个人特权敬请期待...</string>
+    <string name="input_new_nick_name">请输入2~20个字符</string>
+    <string name="input_new_nick_name_tips">请输入新的昵称</string>
+    <string name="submit">提交</string>
+    <string name="register_uc_account">注册UC账号</string>
+    <string name="register_successed">注册成功</string>
+    <string name="uc_phone_number_email">UC帐号/手机号/邮箱</string>
+    <string name="tab_open_server">开服表</string>
+    <string name="tab_open_test">开测表</string>
+    <string name="password_len_0">密码输入为空</string>
+    <string name="limited_12_word">限12个字哦～</string>
+    <string name="text_empty">不能为空哦~</string>
+
+    <!-- 2.5.0_homepage_opt start-->
+    <string name="home_page_topic_everyday">每日一聊</string>
+    <string name="home_page_topic_bygone_day">往日话题</string>
+    <string name="home_page_new_game_tipoff">新游爆料区</string>
+    <string name="home_page_new_game_hot_rank">新游热榜</string>
+    <string name="home_page_net_game_hot_rank">网游热榜</string>
+    <string name="home_page_open_server">开服</string>
+    <string name="home_page_open_server_list_header_game_name">游戏</string>
+    <string name="home_page_open_server_list_header_time">时间</string>
+    <string name="home_page_open_server_list_header_gift">礼包</string>
+    <string name="home_page_open_server_list_item_download">下载</string>
+    <string name="editor_recommend">小编推荐</string>
+    <string name="bygone_recommend">往日推荐</string>
+    <string name="open_test_column_1">游戏</string>
+    <string name="open_test_column_2">状态</string>
+    <string name="open_test_column_3">时间</string>
+    <string name="hot_value">热度: %1$s</string>
+    <integer name="home_page_open_server_list_column_1_weight">248</integer>
+    <integer name="home_page_open_server_list_column_2_weight">216</integer>
+    <integer name="home_page_open_server_list_column_3_weight">112</integer>
+    <integer name="home_page_open_server_list_column_4_weight">95</integer>
+    <string name="upgrade_message_box_new_version_feature">新版本特性</string>
+    <string name="version_update">版本更新</string>
+    <string name="update_immediately">立即更新</string>
+    <string name="update_checking">正在检查更新,请稍候...</string>
+    <string name="upcoming_opentest">即将开测</string>
+    <string name="already_opentest">已开测</string>
+    <string name="upcoming_openserver">即将开服</string>
+    <string name="already_openserver">已开服</string>
+    <string name="loading_data">正在加载</string>
+    <string name="loading_assign"> 正在分配</string>
+    <!-- 2.5.0_homepage_opt end-->
+    <string name="month_download_stat">月下载量</string>
+    <string name="enter_game_name">请输入要搜索的游戏名</string>
+    <string name="err_msg_parse_data">解析数据出错</string>
+    <string name="err_msg_user_interrupted">用户中断请求</string>
+    <string name="verifying_password">正在验证密码...</string>
+    <string name="verify_password_success">密码验证成功</string>
+
+    <!-- 2.3.0 Add -->
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">松开刷新</string>
+    <string name="pull_to_refresh_refreshing_label">正在刷新</string>
+
+    <!-- Just use standard Pull Down String when pulling up. These can be set for languages which require it -->
+    <string name="pull_to_refresh_from_bottom_pull_label">@string/pull_to_refresh_pull_label</string>
+    <string name="pull_to_refresh_from_bottom_release_label">@string/pull_to_refresh_release_label</string>
+    <string name="pull_to_refresh_from_bottom_refreshing_label">@string/pull_to_refresh_refreshing_label</string>
+
+    <string name="default_category">全部分类</string>
+    <string name="default_rank">月榜</string>
+    <string name="no_installed_app">未安装此应用</string>
+    <string name="share_pic_no_exist">图片不存在</string>
+    <string name="share_tip_summery">分享提示摘要</string>
+    <string name="game_share_url_pattern">游戏分享链接是：%1$s?gameid=%2$d</string>
+    <string name="share_game_content">分享内容</string>
+    <string name="auth_succeed">认证成功</string>
+    <string name="auth_fail">认证失败</string>
+    <string name="sharing">正在分享中，请稍候</string>
+    <string name="share_succeed">分享成功</string>
+    <string name="share_failed">分享失败</string>
+    <string name="auth_cancel">认证取消</string>
+    <string name="auth_again">认证无效，请重新授权</string>
+    <string name="sharing_in_background">正在后台分享</string>
+    <string name="share_to">分享到</string>
+    <string name="share_title_default">来自九游的分享</string>
+    <string name="share_url_default">http://9game.cn</string>
+    <string name="share_content_default">手机游戏尽在九游</string>
+    <string name="share_content_title_default">我在九游发现好玩游戏</string>
+    <string name="share_content_share_url_default">http://9game.cn</string>
+    <string name="share_content_ad_url_default">http://app.9game.cn/?ch=KD_3</string>
+    <string name="share_user_title">九游个人中心，涨经验，升等级，享特权</string>
+    <string name="share_user_content">想想还觉得挺激动的</string>
+    <string name="share_icon_url">http://image.base.9game.cn:8080/2014/10/28/10011248.jpg</string>
+    <string name="share_image_url">http://image.base.9game.cn:8080/2014/10/28/10010591.png</string>
+
+    <!-- 2.9.0 share module -->
+    <string name="share_wait_message">正在发送分享，请稍候...</string>
+    <!-- 2.9.0 share module -->
+
+    <string name="first_guide_follow">关注后马上接收游戏下载，开测，礼包提醒</string>
+    <string name="follow_login_notice">登录后马上关注游戏，礼包、开测等动态第一时间知道~</string>
+    <string name="unfollow_comfirm_notice">
+        <![CDATA[取消后你将无法及时收到<font color=\'red\'>礼包、开测</font>等游戏新动态的提醒哦~确定取消吗？]]></string>
+    <string name="follow_fail">关注失败，请重试</string>
+
+    <string name="follow_tip">关注提示</string>
+    <string name="use_current_account">使用已登录账号</string>
+    <string name="switch_account_has_login">已登录：</string>
+    <string name="switch_account_whether_switching">是否切换账号：</string>
+    <string name="switch_account_do_follow">进行关注</string>
+    <string name="unfollow_success">取消关注成功</string>
+    <string name="unfollow_failed">取消关注失败</string>
+
+    <string name="md__drawerOpenIndicatorDesc">Close drawer</string>
+    <string name="md__drawerClosedIndicatorDesc">Open drawer</string>
+
+   <string name="article_activity">资讯活动</string>
+    <string name="no_average_score">暂无评分</string>
+    <string name="game_detail_score">分</string>
+
+    <string name="share">分享</string>
+    <string name="open_with_browser">在浏览器打开</string>
+    <string name="see_details">详情请阅</string>
+    <string name="game_comment">游戏评论</string>
+    <string name="send">发送</string>
+    <string name="comment_dialog_hint">我来说两句(3~200字)</string>
+    <string name="add_comment">我要评分评论</string>
+    <string name="add_comment_and_rating">我要打分评论</string>
+
+    <!-- 个人中心 -->
+    <string name="user_info_gift">存号箱</string>
+    <string name="user_info_posts">帖子</string>
+    <string name="user_info_notifications">通知</string>
+    <string name="user_info_my_follow">关注</string>
+    <string name="user_info_my_collect">收藏</string>
+    <string name="user_info_follow">关注</string>
+    <string name="user_info_collect">已收藏</string>
+    <string name="user_info_uncollect">收藏</string>
+    <string name="user_coins">铜币:%d</string>
+    <string name="user_u_point">U点:%s</string>
+    <string name="user_ungotten_privileges">你有%d项特权未领取</string>
+    <string name="user_privileges">已全部领取当前等级特权</string>
+    <string name="user_uncompleted_tasks">你有%d项任务未完成</string>
+    <string name="user_no_task">今天的任务已全部完成</string>
+    <string name="cancel_favorite_success">取消成功!</string>
+    <string name="user_info_default_login_tips">点此登录</string>
+    <string name="user_info_default_tips">游戏首发、最新礼包、活动信息快人一步</string>
+    <string name="account_logout">退出登录</string>
+    <string name="dialog_logout_tips">正在退出...</string>
+    <string name="dialog_upload_avatar_tips">正在上传中...</string>
+    <string name="dialog_modify_name_tips">正在提交...</string>
+    <string name="logout">退出登录</string>
+    <string name="logout_message">退出登录后你将无法及时收到已关注游戏的新动态提醒~确定退出吗？</string>
+    <string name="toast_checkin_success_tips">铜币+%d</string>
+    <string name="toast_checkin_success_tips1">连续领铜币%1$d天,明日可领%2$d铜币</string>
+
+    <!-- 账号资料页 -->
+    <string name="account_ucid">UC号</string>
+    <string name="account_avatar">头像</string>
+    <string name="account_nickname">昵称</string>
+    <string name="account_lv">等级</string>
+    <string name="account_vip">九游会员</string>
+    <string name="account_modify_password">修改密码</string>
+    <string name="account_switch">切换账号</string>
+
+    <!-- settings-->
+    <string name="settings">设置</string>
+    <string name="settings_common">通用设置</string>
+    <string name="settings_download">下载安装设置</string>
+    <string name="rev_notice_msg">接收通知栏消息</string>
+    <string name="robot_game_helper_str">机器人助手详细设置</string>
+    <string name="rev_forum_notice_msg">接收论坛消息</string>
+    <string name="no_img_mode">无图省流量模式</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="clear_cache_tips">保留缓存可以节省流量、加快加载速度</string>
+    <string name="add_shortcut">添加我的游戏桌面快捷方式</string>
+
+    <string name="silent_install">静默安装</string>
+    <string name="silent_install_tips">一键安装游戏, 无需任何确认(需root权限)</string>
+    <string name="auto_install">自动安装</string>
+    <string name="auto_install_tips">关闭后, 下载完成不会进行安装</string>
+    <string name="auto_del_pkg">安装成功后自动删除安装包</string>
+    <string name="uninstall_auto_del_pkg">卸载游戏同时删除数据包</string>
+
+    <string name="account_info">账号资料</string>
+    <string name="common_settings">通用设置</string>
+    <string name="download_settings">下载安装</string>
+    <string name="pkgs_manager">安装包管理</string>
+    <string name="auto_check_version">自动检查版本更新</string>
+    <string name="check_version">检查更新</string>
+    <string name="feedback">意见反馈</string>
+    <string name="about_ng">关于</string>
+
+    <string name="account_change_user">切换账号</string>
+    <string name="account_change_password">修改密码</string>
+    <string name="user_info">个人资料</string>
+
+    <!-- 2.13.1 demo game -->
+    <string name="demo_game_finished_install">游戏已下载完成，请点击安装按钮进行安装</string>
+    <string name="demo_game_finished_open">游戏已安装，请点击打开按钮打开游戏</string>
+    <string name="demo_game_finished_download">游戏还没下载，请点击前往下载按钮下载游戏</string>
+    <string name="go_to_download">前往下载</string>
+
+    <!-- 图片裁剪 -->
+    <string name="crop_saving">saving...</string>
+    <string name="crop_wait">请稍等...</string>
+    <string name="crop_pick_error">资源未找到</string>
+    <string name="crop_done">完成</string>
+    <string name="crop_cancel">取消</string>
+
+    <!-- 2.17.0 成长体系-->
+    <string name="exp">经验</string>
+    <string name="coin">铜币</string>
+    <string name="contribution">贡献值</string>
+    <string name="upoint">U点</string>
+    <string name="change_account">切换账号</string>
+    <string name="level_up_text">恭喜升级到LV%1$d</string>
+    <string name="floating_message_window_content">确认要隐藏小工具么？</string>
+    <string name="txt_open_float_window">机器人助手</string>
+    <string name="floating_closewindow_text">拖到此处隐藏</string>
+
+    <!-- 3.2.0 -->
+    <string name="script_list_title">辅助工具</string>
+    <string name="tv_need_root">需要Root权限,点此了解</string>
+    <string name="feedback_title">意见反馈</string>
+    <string name="not_net_err">网络已断开,反馈提交失败</string>
+    <string name="doing_feddback">正在提交反馈...</string>
+    <string name="not_email">输入的Email格式不正确</string>
+    <string name="max_512_words">最多可以输入512字</string>
+    <string name="success_feedback">反馈提交成功</string>
+    <string name="unsuccess_feedback">反馈提交失败</string>
+    <string name="script_loading">加载中...</string>
+    <string name="help_title">帮助</string>
+    <string name="script_title">工具说明</string>
+    <string name="need_root_tip">抱歉~需要Root才能运行工具</string>
+    <string name="resolution_not_enable">暂不支持你的机型</string>
+    <string name="game_version_not_enable">请升级游戏，仍有问题请反馈</string>
+    <string name="data_unusual">系统开小差了，请稍后重试</string>
+    <string name="tool_init_falied">初始化失败</string>
+    <string name="tool_init_falied2">运行失败了</string>
+    <string name="get_root_fail">请你授权(Root)</string>
+    <string name="error_tips_tail">，点此了解</string>
+    <string name="script_starting">辅助服务启动中...</string>
+    <string name="not_root_permission">无root权限</string>
+    
+    <string name="floatwindow_feedback_content_hint">使用中遇到问题，请在此反馈</string>
+    <string name="floatwindow_feedback_email_hint">留下Email方便联系</string>
+    <string name="empty_script">暂无内容</string>
+    <string name="window_hide_notice">亲，隐藏后24小时候将不会再出来哦~</string>
+    <string name="window_turn_notice">请避免在运行过程中转动你的手机</string>
+    <string name="start_script">一键开始</string>
+    <string name="float_window_setting_title">机器人助手</string>
+    <string name="script_stop_unnormally">辅助工具停止了</string>
+    <string name="navigate_show_tips">出现浮窗的方法</string>
+    <string name="navigate_init_msg">躲猫猫,我躲,躲</string>
+    <string name="script_stop_unnormally_message">温馨提示\n切换应用和关闭手机屏幕会使工具停止</string>
+    <string name="to_know_root">去了解Root</string>
+    <string name="robot_setting">设置</string>
+    <string name="robot_reset">还原</string>
+    <string name="robot_feedback">反馈</string>
+    <string name="save_config_setting">保存设置</string>
+    <string name="save_config_setting_success">保存成功!</string>
+    <string name="submit_apply">提交申请</string>
+    <string name="modify_success">修改成功！</string>
+
+    <!-- 2.16.2 splash -->
+    <bool name="has_user_guide">true</bool>
+
+
+    <!-- galleryView -->
+    <string name="label_gallery_index">%1$d/%2$d</string>
+    <string name="label_gallery_tips">提示</string>
+    <string name="label_gallery_save_img">保存图片</string>
+    <string name="btn_text_confirm">确定</string>
+    <string name="btn_text_cancel">取消</string>
+    <string name="btn_text_give_up">放弃</string>
+    <string name="btn_text_give_up_no">不放弃</string>
+
+    <!-- forum -->
+    <string name="enter_forum">进入版块：</string>
+    <string name="recently">刚刚</string>
+    <string name="less_than_n_minute">%1$d分钟前</string>
+
+    <string name="expand_text">展开余下全文</string>
+    <string name="collapse_text">收起</string>
+    <string name="posts_detail">帖子详情</string>
+    <string name="share_posts_text">我在九游论坛发布了《%1$s》</string>
+    <string name="share_view_posts_text">我正在看《%1$s》</string>
+    <string name="posts_reply_text">回复</string>
+    <string name="posts_thread_text">发帖</string>
+
+    <string name="expand_comments">展开余下%1$s条评论</string>
+    <string name="wair_more_comments">正在拉取更多点评...</string>
+    <string name="send_edit_hint">我来说两句(〃∀〃)</string>
+    <string name="send_edit_text_count">（可输入%1$s字）</string>
+    <string name="no_reply">暂无回贴，沙发等着你来坐(๑ơ ₃ ơ)♥</string>
+
+    <string name="label_gally_menu_dialog_photo">拍 照</string>
+    <string name="label_gally_menu_dialog_albums">相 册</string>
+    <string name="label_status_info">已选%1$d张，还剩%2$d张可选</string>
+    <string name="label_selected_image_size_info">共%1$s</string>
+    <string name="label_selected_image_warning_toast">最多只能选%1$d张</string>
+    <string name="label_album_page_limit_tips">最多上传%1$d张</string>
+    <string name="label_album_counter">已选择%1$d张</string>
+    <string name="forum_no_permission_new_theme">你没有发表新帖权限</string>
+    <string name="forum_no_permission_edit_theme">你没有编辑帖子权限</string>
+    <string name="forum_2_floor">沙发</string>
+    <string name="forum_3_floor">板凳</string>
+    <string name="forum_4_floor">地板</string>
+    <string name="reply_user">回复%1$s：</string>
+    <string name="delete_posts_thread_success">帖子删除成功！</string>
+    <string name="delete_posts_thread_failed">帖子删除失败！</string>
+    <string name="post_sucess">耶~我是发帖达人！</string>
+    <string name="edit_sucess">耶~编辑成功！</string>
+    <string name="post_fail">网络不太好哦~请重新发帖</string>
+    <string name="get_post_fail">获取编辑内容失败~</string>
+    <string name="reply_sucess">太好了,回复成功</string>
+    <string name="pic_upload_fail">上传图片失败，请重新点击发表</string>
+    <string name="network_fail">~(>_&#060;)~ 网络有点坑爹</string>
+    <string name="comment_success">点评成功！</string>
+    <string name="comment_failed">点评失败！请稍候重试</string>
+    <string name="wait_check_post">正在处理...</string>
+    <string name="wait_send_comment">正在发送点评...</string>
+    <string name="already_last_page">已经是最后一页</string>
+    <string name="no_more_comment">无更多回复┐(´д`)┌</string>
+    <string name="no_more_message">&#062; &#060; 没有更多动态</string>
+    <string name="no_more_thread">&#062; &#060; 没有更多帖子</string>
+    <string name="no_more_board">&#062; &#060; 没有更多版块</string>
+    <string name="no_permision_visit">&#062; &#060; 无权限访问</string>
+    <string name="operation">操作</string>
+    <string name="confirm_delete">确认删除？</string>
+    <string name="delete_success">删除成功</string>
+    <string name="delete_failed">删除失败</string>
+    <string name="deleting">正在删除</string>
+    <string name="reply">回复</string>
+    <string name="posts">发贴</string>
+    <string name="comment">点评</string>
+    <string name="posts_error">T.T 帖子被主人删掉了</string>
+    <string name="failed">失败</string>
+    <string name="forum_reply_need_two_words">回复至少2个字</string>
+    <string name="forum_image_preview">预览</string>
+    <string name="forum_sure">确定(%1$d)</string>
+    <string name="forum_sure2">确定(%1$d/%2$d)</string>
+    <string name="image_network_fail">网络好像有点问题</string>
+    <string name="image_max_count">最多选择%1$d张</string>
+    <string name="forum_image_up_to_size">最多选择%1$d张图片</string>
+    <string name="image_count">%1$d张</string>
+    <string name="forum_post_success">√帖子发送成功</string>
+    <string name="forum_draft_not_save">不保存</string>
+    <string name="forum_replace_draft">替换草稿</string>
+    <string name="forum_save_draft">保存草稿</string>
+    <string name="forum_abort">放弃</string>
+
+    <!--3.1.0.5 专属礼包，关注自定义 UI优化-->
+    <string name="about_label_tel">客服电话</string>
+    <string name="about_tel_default_value">020-66311900</string>
+    <string name="about_label_weixin">微信客服</string>
+    <string name="about_weixin_default_value">ucwebkf</string>
+    <string name="about_label_qqgroup">粉丝QQ群</string>
+    <string name="about_qqgroup_default_value">348978439</string>
+    <string name="about_label_follow_9game">九游官网</string>
+    <string name="about_9game_default_url">http://a.9game.cn?pageType=browser</string>
+    <string name="about_label_follow_9game_weibo">九游微博</string>
+    <string name="about_9game_weibo_default_value">http://m.weibo.cn/u/2607990444?pageType=browser</string>
+
+    <string name="forum_error_no_permission">没有权限执行此操作</string>
+    <string name="forum_error_prohibit_posts">特设版块重地！禁止发帖！</string>
+    <string name="forum_error_forum_not_exists">游戏对应的版块不存在</string>
+    <string name="forum_error_forum_need_password">需要密码才能进呢！</string>
+    <string name="forum_error_no_permission_in_user_group">所在用户组无法进行此操作</string>
+    <string name="forum_error_posts_closed">帖子已关闭，不能点评</string>
+    <string name="forum_error_posts_not_exists_or_checking">主题不存在或正在被审核</string>
+    <string name="forum_error_posts_content_invalid">发布的内容含敏感内容，发布失败</string>
+    <string name="forum_error_posts_comment_closed">点评功能已关闭</string>
+    <string name="forum_error_comment_posts_not_found">抱歉，你不能点评此帖或帖子尚未找到</string>
+    <string name="forum_error_no_permission_to_read">好遗憾！你没有阅读权限~</string>
+    <string name="forum_forum_notifications_close">关闭提醒</string>
+    <string name="min_text_len">至少%1$d个字</string>
+    <string name="forum_upload_image_not_allowed">本帖不能上传图片</string>
+    <string name="forum_upload_image_size_error">第%1$d张图片太大</string>
+    <string name="forum_upload_image_handle_error">处理第%1$d张图片失败</string>
+    <string name="posts_thread_closed">此贴已关闭，不能%1$s</string>
+    <string name="input_verification_code">请输入正确的验证码</string>
+    <string name="no_image_can_not_save">无图模式没有无法保存照片</string>
+    <string name="forum_ask_save_draft">一个版块最多只能保存一个草稿,是否保存草稿?</string>
+    <string name="forum_ask_replace_draft">一个版块最多只能保存一个草稿,是否替换草稿?</string>
+    <string name="forum_ask_abort_draft">是否放弃编辑?</string>
+    <string name="forum_title_must_2_words">标题至少2个字</string>
+    <string name="forum_content_must_2_words">内容至少2个字</string>
+    <string name="forum_please_enter_verify_code">请输入验证码</string>
+    <string name="resend">重发</string>
+    <string name="picture_choose">图片选择</string>
+
+    <!-- 3.4.0 公会端化 -->
+    <string name="batch_processing">批量管理</string>
+    <string name="black_list">黑名单</string>
+    <string name="only_show_unactive_member">只显示未激活成员</string>
+
+    <string name="delete_from_guild_btn_text">驱逐出会（已选%d人）</string>
+    <string name="cancel_black_list_btn_text">解除黑名单（已选%d人）</string>
+
+    <string name="guild_member">普通成员</string>
+
+    <string name="get_user_privilege_failed">获取用户权限失败</string>
+
+    <string name="guild_speaker_text_count">%1$d/%2$d</string>
+
+    <!--公会主页-->
+    <string name="spoke_setting">代言人设置</string>
+    <string name="guild_long_press_cancel_spoke_tips">长按图标可取消代言人</string>
+    <string name="guild_spoke_tips">公会代言人</string>
+    <string name="add_spoke">添加代言人</string>
+    <string name="cancel_spoke_success">取消代言人成功</string>
+    <string name="cancel_spoke_tips">提示</string>
+    <string name="cancel_spoke_confirm_string">确定要取消%1$s代言人身份吗？</string>
+    <string name="cancel_star_confirm_string">确定要取消%1$s展示成员身份吗？</string>
+    <string name="guild_member_title">公会成员</string>
+    <string name="guild_confirm_pick_spoke">确定(%1$d/%2$d)</string>
+    <string name="spoke_number_limit">代言人数量已达上限</string>
+    <string name="star_number_limit">展示人员数量已达上限</string>
+    <string name="already_add">已添加</string>
+    <string name="known">知道了</string>
+    <string name="user_his_picture">你选择了代言人后，九游会自动读取该用户的头像作为展示照片~</string>
+    <string name="guild_cancel_spoke_fail">取消代言人失败</string>
+    <string name="guild_ipload_img_fail">上传图片失败</string>
+    <string name="guild_spoke_up_to_max">代言人数量已达上限</string>
+    <string name="module_edit_title_hint">请输入标题，限20字</string>
+    <string name="module_edit_content_hint">请输入文章内容，限5000字</string>
+    <string name="star_setting">展示模块设置</string>
+    <string name="guild_star_up_to_max">展示成员数量已达上限</string>
+    <string name="cancel_star_success">取消展示成员成功</string>
+    <string name="guild_cancel_star_fail">取消展示成员失败</string>
+    <string name="add_star">添加展示成员</string>
+    <string name="guild_long_press_cancel_star_tips">长按图标可取消展示成员</string>
+    <string name="guild_stars_tips">展示的成员</string>
+    <string name="user_his_picture_for_star">你选择了展示成员后，九游会自动读取该用户的头像作为展示照片~</string>
+    <string name="upload_image_handle_error">手机内存要爆了 &#062; &#060; ,无法上传第%1$d张图片</string>
+    <string name="camera_not_available">手机内存要爆了 &#062; &#060; ,无法启用相机</string>
+    <string name="galley_not_available">手机内存要爆了 &#062; &#060; ,无法启用相册</string>
+    <string name="please_notice">请注意！</string>
+    <string name="apply_modify_name">申请改名</string>
+
+    <!--3.4.0 公会端化 入驻游戏-->
+    <string name="settle_game">入驻游戏</string>
+    <!--<string name="settle_game_confirm">入驻游戏数量有限，你确定要入驻%s等%d个游戏吗？</string>-->
+    <string name="add_settled_game">添加入驻游戏</string>
+    <string name="add_settled_game_now">马上入驻(%1$d/%2$d)</string>
+    <string name="add_settled_game_over_flow_tips">最多只能入驻%1$d款游戏哦~</string>
+    <string name="add_settled_game_confirm_one">入驻游戏数量有限，你确定要入驻%1$s游戏吗？</string>
+    <string name="add_settled_game_confirm_many">入驻游戏数量有限，你确定要入驻%1$s等%2$d个游戏吗？</string>
+    <string name="unsettle_game">取消入驻游戏</string>
+    <string name="unsettle_game_confirm">你确定要取消入驻%1$s吗？</string>
+    <string name="unsettle_game_unsettle_tips">本月还剩%1$d次免费解除哦，且用且珍惜</string>
+    <string name="unsettle_game_unsettle_overflow_tips">抱歉~本月取消入驻次数已用完</string>
+    <string name="unsettle_game_cost_tips">你本月的免费解除次数已用完，本次取消入驻游戏将消耗%1$s贡献值。</string>
+    <string name="unsettle_game_contribution_tips">可用贡献值：%1$d</string>
+    <string name="unsettle_game_contribution_Inadequate_tips">贡献值不足，取消入驻失败</string>
+    <string name="add_settled_game_link_game">关联游戏</string>
+    <string name="add_settled_game_link_game_tips">你安装的游戏或公会已入驻的游戏</string>
+    <string name="add_settled_game_hot_game">热门游戏</string>
+    <string name="add_settled_game_search_result">共有%1$d条搜索结果</string>
+    <string name="add_settled_game_check_tips">请勾选要入驻的游戏~</string>
+    <string name="add_settled_game_search_no_more">没有更多数据了~</string>
+    <string name="add_settled_game_search_no_key">请输入游戏名称</string>
+    <string name="add_settled_game_settle_success">游戏入驻成功</string>
+    <string name="add_settled_game_check_guild_error">查询公会信息失败</string>
+    <string name="add_settled_game_check_guild_reload">正在重新加载公会信息，请稍后再试</string>
+    <string name="add_settled_game_settle_over_flow">入驻游戏数已满</string>
+    <string name="add_settled_game_unsettle_success">取消入驻成功</string>
+    <string name="add_settled_game_please_wait">请稍候...</string>
+
+    <string name="check_information">查看信息</string>
+    <string name="cancel_management">取消管理员</string>
+    <string name="cancel_spokesman">取消代言</string>
+    <string name="expel">驱逐</string>
+    <string name="guild_member_search_hit">请输入成员名称</string>
+
+    <string name="approval_record">事务管理</string>
+    <string name="guild_approve">入会申请</string>
+    <string name="gift_approve">礼包申请</string>
+
+    <string name="forum_top_tip_text">单击此处可以快速回到顶部噢~</string>
+    <string name="forum_jump_tip_text">向下拉，上一页内容就出来了</string>
+
+    <string name="drop_down_list_header_default_text">Click to refresh&#8230;</string>
+    <string name="drop_down_list_header_pull_text">Drop Down to refresh&#8230;</string>
+    <string name="drop_down_list_header_release_text">Release to refresh&#8230;</string>
+    <string name="drop_down_list_header_loading_text">Loading&#8230;</string>
+    <string name="drop_down_list_footer_default_text">没有更多数据了~</string>
+    <string name="drop_down_list_footer_loading_text">努力加载中</string>
+    <string name="drop_down_list_footer_no_more_text">没有更多数据了~</string>
+
+    <string name="get_list_failed">获取列表失败</string>
+
+    <string name="guild_member_not_activated">未激活</string>
+    <string name="guild_member_search_result">共%s条搜索结果</string>
+    <string name="guild_member_search_nothing_tips_1">抱歉～没有你要找的成员！</string>
+    <string name="guild_member_search_nothing_tips_2">请重新搜索</string>
+
+    <string name="guild_select_target_text">确定(已选择%1$d个对象)</string>
+    <string name="guild_join_approve_select_target_one">的入会申请</string>
+    <string name="guild_join_approve_select_target">**等%1$d的入会申请</string>
+    <string name="guild_gift_approve_select_target_one">的购买礼包申请</string>
+    <string name="guild_gift_approve_select_target">**等%1$d的购买礼包申请</string>
+    <string name="guild_approve_select_over_flow">说好的只能批量处理20条记录呢~</string>
+    <string name="guild_approve_no_member_privilege">你还没有成员管理权限哦~</string>
+    <string name="guild_approve_no_storage_privilege">你还没有仓库管理权限哦~</string>
+    <string name="guild_approve_select_top_twenty">选前20条</string>
+    <string name="guild_approve_cancel_all_selected">取消选中</string>
+
+    <string name="guild_contribution">贡献：%d</string>
+    <string name="guild_total">累计</string>
+
+    <string name="manage_privielge">管理权限</string>
+    <string name="first_manage_privielge">初次设置权限</string>
+    <string name="loading_privilege_info">正在加载权限信息</string>
+    <string name="loading_more">正在加载更多</string>
+    <string name="updating_privilege">正在更新用户权限</string>
+    <string name="deleting_member">正在删除成员</string>
+    <string name="deleting_blacklist">正在解除黑名单</string>
+
+    <string name="guild_settings">设置</string>
+    <string name="guild_setting_guild_info_page_title">公会信息</string>
+    <string name="guild_setting_guild_info">公会信息</string>
+    <string name="guild_setting_edit_admin_title">编辑管理员头衔</string>
+    <string name="guild_setting_edit_admin_title_tips">炫酷头衔更能突显尊贵的管理身份</string>
+    <string name="guild_setting_edit_member_level_title">编辑成员等级名称</string>
+    <string name="guild_setting_edit_member_level_title_tips">个性化等级名称更能突显公会魅力</string>
+    <string name="guild_setting_join_authentication">入会身份验证</string>
+    <string name="guild_setting_join_authentication_allow_all">允许任何人加入</string>
+    <string name="guild_setting_join_authentication_need_auth">需要验证消息</string>
+    <string name="guild_setting_join_authentication_not_allow">不允许任何人加入</string>
+    <string name="guild_setting_edit_admin_password">修改管理密码</string>
+    <string name="guild_setting_dismiss_guild">解散公会</string>
+    <string name="guild_setting_dismiss_guild_content">公会解散后将无法恢复，且24H内无法创建新公会，确定解散吗？</string>
+    <string name="guild_setting_dismiss_confirm">狠心解散</string>
+    <string name="guild_setting_dismiss_done_content">你的公会已经解散！九游会发送系统通知给其他公会成员。\n感谢曾经的陪伴，你的荣誉永远铭刻在心中！</string>
+    <string name="guild_setting_dismiss_done_back_to_guild_home">返回公会基地</string>
+
+
+    <string name="save_success">保存成功</string>
+    <string name="save_fail">保存失败</string>
+
+
+    <string name="guild_info_name">名称</string>
+    <string name="guild_info_id">ID：</string>
+    <string name="guild_info_level">等级：</string>
+
+    <string name="guild_info_nick_name_prefix">昵称前缀</string>
+    <string name="guild_info_declaration">宣言</string>
+    <string name="guild_info_introduction">简介</string>
+
+    <string name="guild_info_nick_name_prefix_hits">5字以内，自动推荐成员披马甲，酷毙了！</string>
+    <string name="guild_info_declaration_hits">30字以内</string>
+    <string name="guild_info_introduction_hits">不能出现违法敏感字眼，不超300字符~</string>
+
+    <string name="guild_info_change_not_save_tips">你修改了公会信息，确定不保存就退出吗？</string>
+    <string name="guild_button_text_consider">我再考虑一下</string>
+    <string name="guild_info_change_not_save_tips_ok">狠心退出</string>
+
+    <string name="guild_info_save">保存</string>
+    <string name="back">返回</string>
+
+    <string name="guild_info_edit_logo">修改公会图标</string>
+
+    <string name="guild_info_edit_background">修改公会背景</string>
+
+
+    <string name="guild_admin_deacon_title">会长</string>
+    <string name="guild_admin_vice_deacon_title">副会长</string>
+    <string name="guild_admin_chief_title">军团长</string>
+    <string name="guild_admin_title_edit_text_hits">输入的头衔将替代原头衔，限6个字</string>
+    <string name="guild_admin_title_save_button_text">确定</string>
+
+    <string name="guild_member_level_title_level_1">LV1</string>
+    <string name="guild_member_level_title_level_2">LV2</string>
+    <string name="guild_member_level_title_level_3">LV3</string>
+    <string name="guild_member_level_title_level_4">LV4</string>
+    <string name="guild_member_level_title_level_5">LV5</string>
+    <string name="guild_member_level_title_level_6">LV6</string>
+
+    <string name="guild_member_level_title_edit_text_hints">请输入%s的等级名称，限6个字</string>
+
+    <string name="guild_modify_password_page_title">修改密码</string>
+    <string name="guild_modify_password_forget_password">忘记密码</string>
+    <string name="guild_modify_password_show_password">显示密码</string>
+    <string name="guild_modify_password_original_password_error">密码错误</string>
+    <string name="guild_modify_password_new_password_confirm_error">两次输入密码不一致</string>
+
+    <string name="guild_get_back_password_input_tips">请输入绑定手机号码，系统将会以短信形式把密码发送给你：</string>
+
+    <string name="guild_get_back_password_input_error_tips">输入的手机号码错误</string>
+
+    <string name="search_game_no_result_sorry">抱歉~没有你要找的游戏！</string>
+    <string name="search_game_no_result_research">请重新搜索</string>
+    <string name="search_game_no_recommend_sorry">抱歉~没找到推荐的游戏！</string>
+    <string name="search_game_no_recommend_retry">请重新尝试</string>
+	<string name="getting_sort_data">正在获取排序数据</string>
+	<string name="delete_guild_member_title">驱逐出会</string>
+	<string name="delete_guild_member_message">人生在世，谁能无错？小伙伴之间要相互包容，你真的要将%1$s驱逐出会吗？</string>
+	<string name="delete_guild_member_list_msg">人生在世，谁能无错？小伙伴之间要相互包容，你真的要驱逐选中的成员吗？</string>
+	<string name="delete_guild_member_checkbox">拉入黑名单</string>
+    <string name="guild_settle_game_rest_settle_count_tips">剩余可入驻的游戏数：</string>
+    <string name="guild_settle_game_guild_level_tips">你的公会等级：</string>
+    <string name="guild_settle_game_unsettle_tips">长按图标可取消入驻</string>
+    <string name="guild_settle_game_settled_game_list_tips">已入驻游戏</string>
+	<string name="search_string_not_null">搜索字符不能为空</string>
+	<string name="spokesman">代言人</string>
+	<string name="designation_with_colon">称号 ：%s</string>
+	<string name="cancel_vice_prisdent">取消副会长</string>
+	<string name="confirm_cancel_vice_prisdent">确定取消%s副会长资格？</string>
+	<string name="success_to_cancel">取消成功</string>
+	<string name="designation_dialog_title">赋予称号</string>
+	<string name="designation_dialog_content">起个炫酷的称号，让你的手下们感受到你无微不至的爱吧!</string>
+	<string name="designation_dialog_hint">不超过6字符哟~</string>
+	<string name="designation_none">称号不能为空哦</string>
+	<string name="member_manager_title">成员管理</string>
+    <string name="member_list_title">成员列表</string>
+    <string name="member_count">%d人</string>
+    <string name="member_active_count">（激活%1$d 未激活%2$d）</string>
+
+	<string name="guild_dismiss_confirm_dialog_content">为了保证公会的安全性，请输入管理密码</string>
+	<string name="guild_dismiss_confirm_dialog_password">管理密码：</string>
+	<string name="dialog_button_text_i_know">我知道了</string>
+	<string name="dialog_title_ninegame_office">九游公会办事处</string>
+
+	<string name="guild_exit_not_save_tips">你的修改尚未保存，要退出吗？</string>
+	<string name="guild_exit_not_save_confirm">确定</string>
+	<string name="guild_exit_not_save_cancle">取消</string>
+
+    <string name="guild_input_password_intro">为确保公会资料安全，请先输入你的管理密码验证身份</string>
+    <string name="manage_password_label_text">管理密码:</string>
+    <string name="password_error">密码错误</string>
+    <string name="password_error_and_retry">密码错误，请重试~</string>
+    <string name="ninegame_guild_office">九游公会办事处</string>
+    <string name="guild_set_password_intro">欢迎会长来到新九游公会，你需要重新设置：（管理密码用于发放U点、充值卡等重要操作时验证身份哦~）</string>
+    <string name="comfirm_password_label_text">再次输入:</string>
+
+    <string name="guild_modify_password_original_password">原密码</string>
+    <string name="guild_modify_password_new_password">新密码</string>
+    <string name="guild_modify_password_confirm_password">确定密码</string>
+
+    <string name="guild_modify_password_input_original_hints">请输入原密码作验证</string>
+    <string name="guild_modify_password_input_new_hints">6&#8211;12位字母、数字、符号组合</string>
+    <string name="guild_modify_password_input_new_confirm_hints">请再次输入</string>
+
+    <string name="guild_get_back_password">找回密码</string>
+    <string name="guild_input_phone_number_hints">请输入手机号码</string>
+    <string name="guild_input_phone_number_error">手机号码错误</string>
+    <string name="guild_module_pic_text">图文模块</string>
+    <string name="guild_module_pic_text_tip">可以添加多个带图片、标题、文字描述的项目</string>
+    <string name="guild_module_head_text">头像展示模块</string>
+    <string name="guild_module_head_text_tip">每个模块可以展示最多20个成员头像</string>
+    <string name="guild_sperateline_selector">+自定义</string>
+
+    <string name="setting_success">设置成功</string>
+    <string name="assign_success">分配成功</string>
+    <string name="guild_setting_operate_fail_tips">操作失败</string>
+    <string name="guild_setting_operate_success_tips">大功告成！</string>
+    <string name="guild_setting_loading_text">提交修改中</string>
+    <string name="guild_setting_save_loading_text">保存中......</string>
+    <string name="guild_dismiss_loading_text">解散中......</string>
+    <string name="guild_member_list_failed">获取成员列表失败</string>
+    <string name="guild_member_list">成员列表</string>
+    <string name="guild_member_list_with_count">成员列表（%d）</string>
+    <string name="guild_search_failed">查询失败</string>
+    <string name="guild_memory_out">内存不足</string>
+    <string name="drop_down_list_footer_loading_earlier">点击查看更早动态</string>
+
+    <string name="forum_search_no_data">对不起，没有匹配的结果，换一个词试试吧(｡ŏ_ŏ)</string>
+    <string name="forum_edit_title_hint">想一个亮瞎他们钛合金眼的标题吧~</string>
+    <string name="forum_edit_title_too_long_tip">标题字数超过了%d字哦~</string>
+    <string name="forum_edit_content_too_long_tip">内容字数超过了%d字哦~</string>
+    <string name="forum_edit_for_bidden_error">咱们要做中国和谐好公民~发布的内容不能涉及敏感词哦！</string>
+    <string name="forum_edit_for_bidden_error_option_confirm">返回编辑</string>
+    <string name="forum_edit_for_bidden_error_option_cancel">放弃发帖</string>
+    <string name="forum_edit_for_sensitive_word_error">此贴含有敏感词，需审核后显示~和谐好公民从我做起！</string>
+    <string name="forum_edit_verification_hint">请输入右侧的验证</string>
+    <string name="forum_edit_verification_hint_right">请输入正确的验证码</string>
+    <string name="forum_edit_verification_hint_enter">请输入验证码</string>
+    <string name="forum_edit_exit">退出</string>
+    <string name="forum_edit_give_up">真的要放弃本次编辑吗？</string>
+    <string name="forum_error_msg_5001000">服务器抽风，请稍候再试</string>
+    <string name="forum_error_msg_5001001_to_5001003">服务器出错，请稍候再试</string>
+    <string name="forum_error_msg_5001200">发生未知错误，请重试</string>
+    <string name="forum_jump_page_text_input_1">跳到第</string>
+    <string name="forum_jump_page_text_input_2">页</string>
+    <string name="forum_jump_page_text_current_page">当前位置 : %1$d/%2$d页</string>
+    <string name="forum_jump_page_title">跳页</string>
+    <string name="forum_header_view_text">第%1$d页</string>
+
+    <string name="forum_post_sequence_asc">正序查看</string>
+    <string name="forum_post_sequence_desc">倒序查看</string>
+    <string name="forum_post_sequence_asc_no_data">没有回复可以倒序</string>
+    <string name="forum_post_sequence_desc_no_data">没有回复可以正序</string>
+    <string name="forum_msg_list_title">动态列表</string>
+    <string name="forum_edit_waiting">加载中...</string>
+    <string name="forum_post_sending">帖子正在发送中...</string>
+
+    <string name="clear_all_msg_list_dialog_context">要清空所有帖子动态吗？</string>
+    <string name="clear_all_msg_list_dialog_clear">清空</string>
+    <string name="clear_all_msg_list_dialog_no_clear">不清空</string>
+    <string name="clear_one_msg_list_dialog_context">删除此动态</string>
+    <string name="forum_has_no_msg">一条动态都木有_(:з」∠)_</string>
+    <string name="my_thread_page">帖子</string>
+    <string name="forum_page_loadsuccess">上一页加载完成</string>
+    <string name="forum_fav_cancel_successed">已取消收藏</string>
+    <string name="clear_text" >清空</string>
+
+    <string name="txt_account_status_expired">续费开通</string>
+    <string name="txt_account_status_not_member">开通享受游戏特权</string>
+    <string name="txt_charge">充值</string>
+    <string name="txt_game_gift">游戏礼包</string>
+    <string name="U_point_charge_title">U点充值</string>
+    <string name="U_point_index_title">U点账号</string>
+    <string name="U_point_coupon_title">U点红包</string>
+    <string name="U_point_detail_title">明细查询</string>
+    <string name="U_point_secure_title">账号设置</string>
+
+
+    <!--Android 4.0 风格日期选择器-->
+    <!-- The title of the date picker dialog. [CHAR LIMIT=NONE] -->
+    <string name="date_picker_dialog_title">Set date</string>
+    <!-- Name of the button in the date/time picker to accept the date/time change -->
+    <string name="date_time_set">Set</string>
+    <!-- Name of the button in the date/time picker to accept the date/time change -->
+    <string name="date_time_done">Done</string>
+
+    <!-- DatePicker - accessibility support -->
+    <!-- Description of the button to increment the DatePicker's month value. [CHAR LIMIT=NONE] -->
+    <string name="date_picker_increment_month_button">Increment month</string>
+    <!-- Description of the button to decrement the DatePicker's month value. [CHAR LIMIT=NONE] -->
+    <string name="date_picker_decrement_month_button">Decrement month</string>
+    <!-- Description of the button to increment the DatePicker's day value. [CHAR LIMIT=NONE] -->
+    <string name="date_picker_increment_day_button">Increment day</string>
+    <!-- Description of the button to decrement the DatePicker's day value. [CHAR LIMIT=NONE] -->
+    <string name="date_picker_decrement_day_button">Decrement day</string>
+    <!-- Description of the button to increment the DatePicker's year value. [CHAR LIMIT=NONE] -->
+    <string name="date_picker_increment_year_button">Increment year</string>
+    <!-- Description of the button to decrement the DatePicker's year value. [CHAR LIMIT=NONE] -->
+    <string name="date_picker_decrement_year_button">Decrement year</string>
+
+    <string name="txt_set_as_avatar">设为头像</string>
+    <string name="txt_cur_avatar">当前头像</string>
+    <string name="txt_change_nickname">修改昵称</string>
+    <string name="txt_change_birthday">生日</string>
+    <string name="txt_add_vest">+公会马甲</string>
+    <string name="txt_remove_vest">-公会马甲</string>
+    <string name="txt_gender_girl">女</string>
+    <string name="txt_gender_boy">男</string>
+    <string name="txt_avatar">头像</string>
+    <string name="exit_edit_userinfo_message">你的资料已发生改动，要保存吗？</string>
+    <string name="exit_edit_userinfo_second_message">真的放弃本次编辑了么~？</string>
+    <string name="homepage_user_info_not_change">资料没有发生修改哦~</string>
+    <string name="response_msg_update_nickname_fail">修改失败，请稍后再试</string>
+    <string name="response_msg_nickname_exits">这个昵称已经被抢咯~换个试试</string>
+    <string name="response_msg_nickname_too_long">昵称太长咯~换个试试</string>
+    <string name="response_msg_nickname_auditing">昵称审核中，请稍后再试</string>
+    <string name="txt_homepage_content_valid">含有违禁内容哦，修改后再提交吧~</string>
+    <string name="txt_homepage_content_need_check">含有敏感内容，审核之后才能显示哦~</string>
+    <string name="txt_homepage_content_submit_fail">好桑心，资料提交失败T.T</string>
+    <string name="txt_homepage_content_submit_partly_fail">好桑心，部分资料提交失败T.T</string>
+    <string name="txt_homepage_content_submit_success">欧耶~提交成功</string>
+    <string name="txt_can_not_delete_last_avatar">删掉就没头像啦~</string>
+    <string name="txt_user_info_edit">资料编辑</string>
+    <string name="txt_home_page_game_visible_tips">关闭后在主页不可见</string>
+    <string name="txt_home_page_playing">我在玩</string>
+    <string name="txt_my_home_page_visible">我的主页对陌生人可见</string>
+    <string name="txt_sign">签名</string>
+    <string name="txt_home_page_add_voice">点击添加</string>
+    <string name="txt_home_page_edit_voice">点击修改</string>
+    <string name="txt_home_page_user_voice">语音独白</string>
+    <string name="txt_home_page_location">所在地</string>
+    <string name="txt_home_page_birthday">生日</string>
+    <string name="txt_home_page_gender">性别</string>
+    <string name="txt_home_page_nickname">昵称</string>
+    <string name="txt_home_page_edit_photo_tips">共8张，长按照片可以排序</string>
+    <string name="txt_delete_friend_tip1">
+        <![CDATA[<font color=\"#000000\">删除后无法和</font><font color=\"#FF0000\">]]></string>
+    <string name="txt_delete_friend_tip2"><![CDATA[</font><font color=\"#000000\">聊天，真的要残忍删除么~?</font>]]></string>
+    <string name="txt_like_fail">点赞失败，再试一次吧~</string>
+    <string name="txt_chat">聊天</string>
+    <string name="txt_chat_add">加好友聊天</string>
+    <string name="txt_like_too_frequently">先喝杯茶，歇会再点赞吧~</string>
+    <string name="txt_upload_voice_success">语音上传成功</string>
+    <string name="text_upload_voice_fail">语音上传失败</string>
+    <string name="txt_hold_to_speak">按住 说话</string>
+    <string name="txt_voice_sd_card_fail">检测不到SD卡，请检查后再试吧~</string>
+    <string name="txt_voice_record_too_frequently">先喝杯茶，歇会再录吧~</string>
+    <string name="txt_voice_too_short">说话时间太短咯~再说多点嘛~</string>
+    <string name="txt_voice_create_cache_folder_fail">RP不够，无法录音，再试一次吧</string>
+    <string name="txt_voice_init_thread_fail">RP不够，无法录音，再试一次吧</string>
+    <string name="txt_uc_number_prefix">UC号:</string>
+    <string name="txt_default_user_sign">居然木有签名∑( ° △ °|||)</string>
+    <string name="txt_network_fail">网络不太好哦~什么都看不到T.T</string>
+    <string name="txt_default_play_game">好桑心~TA还没有在玩的游戏T.T</string>
+    <string name="txt_default_guild">哎呦~居然还没有加入公会d(ŐдŐ๑)</string>
+    <string name="txt_guild_title1">TA的职务：代言人</string>
+    <string name="txt_guild_designation_prefix">TA的称号：</string>
+    <string name="txt_guild_title_prefix">TA的职务：</string>
+    <string name="txt_default_post">哎呦喂~还没有发表过帖子哦╮(╯▽╰)╭</string>
+    <string name="txt_post_reply_prefix">回复了：</string>
+    <string name="txt_post_prefix">发表了：</string>
+    <string name="txt_age">岁</string>
+    <string name="txt_click_to_listen">点击可试听语音效果</string>
+    <string name="txt_voice_release_to_stop">松开 停止</string>
+    <string name="txt_network_fail_1">当前网络不可用哦，检查后再试一次吧</string>
+    <string name="txt_net_work_fail_2">网络不给力哦，检查后再试一次吧</string>
+    <string name="txt_user_sign_prefix">个性签名：</string>
+    <string name="txt_upload_photo_fail">网络不太好哦，照片上传失败，再试一次吧</string>
+    <string name="txt_delete_photo_confirm">真的要删除这张美美的照片吗？</string>
+    <string name="txt_gender_can_not_change">性别不能修改哦~</string>
+    <string name="txt_nickname_is_empty">你什么都没有写哦~</string>
+    <string name="txt_nickname_too_short">昵称长度在2~20个字符之间</string>
+    <string name="txt_nickname_too_long">太长咯~换个试试</string>
+    <string name="txt_user_homepage_title">我的主页</string>
+    <string name="txt_user_voice_title">我的独白</string>
+    <string name="txt_user_voice_default_title">说点什么</string>
+    <string name="txt_user_post_title">我的帖子</string>
+    <string name="txt_user_post_default_content">哎呦喂~还没有发表过帖子哦╮(╯▽╰)╭</string>
+    <string name="txt_user_guild_title">我的公会</string>
+    <string name="txt_guild_level_title">公会等级：</string>
+    <string name="txt_user_guild_default_content">加入公会认识更多小伙伴，想想就觉得好兴奋~</string>
+    <string name="txt_user_game_title">我在玩</string>
+    <string name="txt_user_game_default_content">居然没有在玩的游戏！赶紧去下载个游戏玩玩~</string>
+    <string name="txt_user_guest_title">最近访客</string>
+    <string name="txt_user_guest_default_content">最近没有小伙伴访问过你的主页哦~</string>
+    <string name="txt_user_sign_default_content">居然不写点什么∑( ° △ °|||)</string>
+    <string name="txt_user_guild_title1">我的职务：代言人</string>
+    <string name="txt_user_guild_designation_prefix">我的称号：</string>
+    <string name="txt_user_guild_title_prefix">我的职务：</string>
+    <string name="txt_user_guest_like">赞过我</string>
+    <string name="txt_no_location">不显示位置</string>
+    <string name="txt_guest_like_user">TA赞过我</string>
+    <string name="txt_location_title">所在地</string>
+    <string name="txt_user_voice_play_title">正在听...</string>
+    <string name="txt_user_voice_stop_title">听听TA的声音</string>
+    <string name="txt_guest_list_default_content">还没有小伙伴访问过你的主页哦~</string>
+    <string name="txt_network_guest_fail">还没有查到你的访客数据哦...请给我一首歌的时间T.T</string>
+    <string name="txt_network_game_fail">还没有查到你的游戏数据哦...请给我一首歌的时间T.T</string>
+    <string name="txt_network_guild_fail">还没有查到你的公会数据哦...请给我一首歌的时间T.T</string>
+    <string name="txt_network_post_fail">还没有查到你的帖子数据哦...请给我一首歌的时间T.T</string>
+    <string name="txt_location_loading">努力定位中，先喝杯茶歇会吧~</string>
+    <string name="txt_more_history_message">更多历史消息</string>
+    <string name="txt_no_more_history_message">已没有更多历史消息</string>
+
+    <string name="guild_info_error_tips">请不要出现违法敏感字眼！</string>
+    <string name="guild_dismiss_group">解散军团</string>
+    <string name="guild_edit_group">编辑军团</string>
+    <string name="guild_group_name">军团名称</string>
+    <string name="guild_input_group_name_hit">请输入军团名称，不超10个字~</string>
+    <string name="guild_change_group_master">更换军团长</string>
+    <string name="guild_belong_game">所属游戏</string>
+    <string name="guild_group_member_count_prefix">该军团拥有成员数：</string>
+    <string name="guild_dismiss_group_confirm">该军团的发展蒸蒸日上，你确定要解散%s军团吗?</string>
+    <string name="guild_cancel_dismiss">我再考虑一下</string>
+    <string name="guild_confirm_dismiss">狠心解散</string>
+    <string name="guild_success_dismiss">解散成功</string>
+    <string name="guild_fail_dismiss">解散失败</string>
+    <string name="guild_speaker_submit">立即发送</string>
+    <string name="guild_manager">公会管理</string>
+    <string name="guild_change_group_name">修改军团名称：</string>
+    <string name="guild_group_click_to_bind_game">点击绑定游戏</string>
+    <string name="guild_group_click_to_select_master">点击设置军团长</string>
+    <string name="guild_click_to_select_member">点击选择成员</string>
+    <string name="guild_group_set_master">设置军团长</string>
+    <string name="guild_create_group">创建军团</string>
+    <string name="apply_modify_guild_name">申请更改公会名称</string>
+    <string name="setting_title">赋予称号中...</string>
+    <string name="cancel_title">取消称号中...</string>
+    <string name="set_success">赋予成功</string>
+    <string name="create_group">创建军团</string>
+    <string name="group_management">军团管理</string>
+    <string name="group_name_can_not_be_empty">军团名不能为空</string>
+    <string name="group_name_max_length_tips">军团名不允许超过10个字哦~</string>
+    <string name="success_create_group">创建军团成功</string>
+    <string name="fail_create_group">服务器小盆友太忙了，请稍后重试</string>
+    <string name="group_must_bind_game_tips">必须绑定一个游戏</string>
+    <string name="group_must_bind_owner">必须选择一个军团长</string>
+    <string name="guild_business_card">公会名片</string>
+    <string name="group_creating">正在创建中...</string>
+    <string name="guild_success_modify_group_name">军团名修改成功</string>
+    <string name="guild_fails_modify_group_name">军团名修改成功</string>
+    <string name="bind_game">绑定游戏</string>
+    <string name="guild_gift_putaway">下架后公会商店就看不到这个礼包了-_- 确定要这么做吗?</string>
+    <string name="guild_gift_contri_empty">售价不能为空且最小值为1</string>
+    <string name="guild_gift_contri_setting">正在设置...</string>
+    <string name="guild_gift_select_member">手工发放给成员</string>
+    <string name="guild_gift_no_sold_out">暂不下架</string>
+    <string name="guild_gift_sold_out">残忍地下架</string>
+    <string name="bind_now">立即绑定</string>
+    <string name="bind_success">绑定成功</string>
+    <string name="guild_gift_artificial_confirm">你确认将%1$s礼包发给%2$s等%3$d人吗?</string>
+    <string name="guild_gift_artificial_spe_confirm">你确认将%1$s礼包发给%2$s吗?</string>
+    <string name="guild_voucher_artificial_confirm">你确认将%1$s代金券发给%2$s等%3$d人吗?</string>
+    <string name="guild_voucher_artificial_spe_confirm">你确认将%1$s代金券发给%2$s吗?</string>
+    <string name="guild_voucher_artificial">人工发放代金券</string>
+    <string name="guild_voucher_toast_info">代金券剩余数不够,无法再勾选了</string>
+    <string name="guild_gift_toast_info">礼包剩余数不够,无法再勾选了</string>
+    <string name="guild_gift_artificial">人工发放礼包</string>
+    <string name="please_input_member_name">请输入成员名称</string>
+    <string name="guild_fail_member_name">%1$d个用户发放失败,请重新发放,未发放名单:</string>
+    <string name="guild_info_contribution">可用贡献:</string>
+    <string name="confirm_to_set_group_owner">确定设置%1$s为军团长吗？</string>
+    <string name="confirm_to_set_group_game">确定设置%1$s为绑定游戏吗？</string>
+    <string name="request_timeout_msg">请求超时，请稍候重试</string>
+    <string name="guild_no_gift_prompt">你的公会暂未申请礼包</string>
+    <string name="guild_no_gift_descr_prompt">礼包数量有限,赶快去申请礼包吧>></string>
+    <string name="guild_confirm_assign_gift">确定发放(已选%1$d人)</string>
+    <string name="guild_confirm_choose_gift">已经选择人数%1$d/%2$d</string>
+    <string name="guild_upload_no_gift">你暂未上传任何礼包</string>
+    <string name="guild_upload_no_gift_descr">独乐乐不如众乐乐,有好的礼包记得</string>
+    <string name="guild_upload_no_gift_descrs">及时上传,分享给公会小伙伴</string>
+    <string name="guild_prepaid_no_data">你公会暂无充值卡</string>
+    <string name="guild_upoint_no_data">你公会暂无U点</string>
+    <string name="guild_vouchers_no_data">你公会暂无代金券</string>
+    <!--<string name="guild_vouchers_no_data_descr">发动你的小伙伴多参加九游公会的活动</string>-->
+    <string name="guild_prepaid_no_data_descr">发动你的小伙伴多参加九游公会的活动</string>
+    <string name="guild_prepaid_no_data_descrs">好福利送不停!~</string>
+    <string name="guild_no_choose_member">未选择成员</string>
+    <string name="guild_contribution_prompt_info">发送一次需从公会可用贡献扣除:%1$d</string>
+    <string name="guild_hint_content_info">请谨慎使用:\n发送内容会通过公会小喇叭发送给选择的所有公会成员!此功能一周只能使用1次哦~</string>
+    <string name="guild_trumpet_no_empty">小喇叭发送对象不能为空</string>
+    <string name="guild_trumpet_left_title">再考虑下</string>
+    <string name="guild_trumpet_remain_send_count">本周的使用次数已用完,请下周再来~</string>
+    <string name="guild_trumpet_suc_toast">小喇叭已推送给所选对象</string>
+    <string name="guild_trumpet_confirm_content">将从公会可用贡献扣除%1$d,是否确认使用小喇叭?\n次数有限,且用且珍惜~</string>
+    <string name="guild_trumpet_no_count_confirm_content">是否确认发送本次编辑的内容?\n小喇叭的使用次数有限哦!且用且珍惜~</string>
+    <string name="guild_approve_quit_count">该用户共有%1$d条退会历史记录>></string>
+    <string name="txt_load_photo_fail">网络不太好哦，图片加载失败，再试一次吧</string>
+    <string name="txt_image_too_large">图片太大啦~换其他试试~</string>
+    <string name="txt_sign_too_long">签名太长咯~请修改后重试</string>
+
+    <string name="guild_input_contribution">&#160;个人贡献值</string>
+    <string name="guild_forbidden_status">&#160;禁用不可输入状态</string>
+    <string name="guild_more_module">更多功能模块，敬请期待！</string>
+    <string name="guild_insert_separateline">插入分隔线</string>
+    <string name="guild_add_module">添加模块</string>
+    <string name="guild_passive_quit">被驱逐出会</string>
+    <string name="guild_initiative_quit">主动退出公会</string>
+    <string name="guild_voucher_no_usage">不可叠加使用</string>
+    <string name="guild_voucher_yes_usage">可叠加使用</string>
+    <!--Android 4.0 风格日期选择器-->
+    <!-- The title of the date picker dialog. [CHAR LIMIT=NONE] -->
+    <string name="guild_approve_fail_member_name">%1$d个用户审批失败,请重新发放~</string>
+    <string name="guild_approve_fail_name">未发放名单:</string>
+    <string name="guild_approve_success">审批成功</string>
+    <string name="guild_approve_tick">有%1$d条待审批礼包申请</string>
+    <string name="guild_join_guild_approve">&#160;&#160;申请加入公会</string>
+    <string name="guild_approve_leave_msg">留言:</string>
+    <string name="guild_approve_no_records">你未选择待办记录</string>
+    <string name="guild_approve_no_gift_records">当前没有礼包申请</string>
+    <string name="guild_send_notice">发布公告</string>
+    <string name="guild_edit_notice">编辑公告</string>
+    <string name="guild_sure_to_edit">确认编辑</string>
+    <string name="guild_success_to_edit">编辑成功</string>
+    <string name="guild_notice">公告</string>
+    <string name="guild_refund_history">退会历史记录</string>
+    <string name="guild_notice_more_content">消息内容不能超过50个字符</string>
+    <string name="guild_notice_empty_content">消息内容不能为空</string>
+    <string name="guild_approve_no_gift">快去申请更多稀有礼包让小弟们购买吧!</string>
+    <string name="guild_notice_send_success">发送成功</string>
+    <string name="guild_prepaid_from_tips">来自:</string>
+    <string name="guild_apply_modify_name_remain_0">抱歉，你已经改名%1$d次，不能改名了哦！</string>
+    <string name="guild_upload_tips">立即上传</string>
+    <string name="txt_save">保存</string>
+    <string name="user_info_my_prize">奖品</string>
+    <string name="txt_delete_voice_tips">真的要删除这美妙的语音吗？</string>
+    <string name="txt_recording_tips_prefix">可录制</string>
+    <string name="txt_recording_tips_suffix">s以内的语音</string>
+    <string name="txt_like_success">点赞成功</string>
+    <string name="txt_click_to_listen_2">点击播放语音</string>
+    <string name="txt_voice_playing_1">正在试听</string>
+    <string name="txt_voice_playing_2">正在听...</string>
+    <string name="txt_like_already">已赞</string>
+    <string name="txt_like">点赞</string>
+    <string name="txt_do_not_save">不保存</string>
+
+    <string name="im_notify_string">IM通知服务</string>
+    <string name="im_notify_group_msg">群消息</string>
+    <string name="im_notify_multi_msg">有%1$d个群发来%2$s条消息</string>
+    <string name="im_notify_single_group_msg">[%1$s条]%2$s:%3$s</string>
+    <string name="im_notify_add_group_single">申请加入群%1$s</string>
+    <string name="im_notify_add_group_multi">有%1$d个人申请加入群</string>
+    <string name="im_notify_add_group_apply">加群申请</string>
+    <string name="im_notify_private_apply">请求加你为好友</string>
+    <string name="im_notify_private_multi_apply">有%1$d个人请求加你为好友</string>
+    <string name="im_notify_private_new_friend">新的好友</string>
+    <string name="im_notify_private_chat_multi_msg">[%1$s条]%2$s</string>
+    <string name="im_notify_send_msg_faile">消息未发送</string>
+    <string name="im_notify_send_msg_faile_count">有%1$d条消息未发送</string>
+    <string name="recv_im_msg_notification">聊天消息通知栏提醒</string>
+    <string name="nine_game_player">九游玩家</string>
+    <string name="im_notify_single_group_msg_special">[%1$s条]%2$s</string>
+
+    <string name="operate_fail_tips">操作失败</string>
+    <string name="txt_delete_friend_success">删除好友成功</string>
+    <string name="txt_delete_friend_fail">删除好友失败</string>
+    <string name="txt_add_friend_fail">请求加好友失败:</string>
+    <string name="txt_photo_upload_success">图片上传成功</string>
+    <string name="txt_upload_file_fail">上传文件失败</string>
+    <string name="txt_menu_report">投诉</string>
+    <string name="good_with_lovely_style">棒棒哒~</string>
+    <string name="guild_no_unactivated_member">公会没有未激活成员了哦！</string>
+    <string name="member_is_not_in_guild_tips">该用户已不在本公会，无法查看他的公会名片~</string>
+    <string name="load_more_fail_and_retry">加载失败，请点击重试</string>
+
+    <string name="guild_forget_password_dialog_content">请联系UCID:40010009九游帆布鞋，帮你人工找回密码~\n\n如有其它问题，请联系客服电话:\n020-66826682</string>
+    <string name="switch_another_mobile">换其他手机号</string>
+    <string name="mobile_has_verified_switch_account_text">该手机号码已被%1$s验证过，是否切换该账号进行验证</string>
+    <string name="mobile_has_verified">这个号码已被其他UC号验证过咯</string>
+    <string name="mobile_has_been_verified">该手机号已经被以下账号验证过：</string>
+    <string name="need_to_switch_account">是否切换至该账号进行验证？</string>
+    <string name="txt_sign_fail">领取失败，请稍后再试</string>
+    <string name="txt_get_prize_info_fail">获取奖品页信息失败，请稍后再试</string>
+    <string name="guild_modify_guild_name_notice">公会名称只允许修改%1$d次哦！</string>
+    
+    <string name="guild_modify_name_warning">请慎重考虑后再提交申请！</string>
+    <string name="guild_current_name">当前公会名称：</string>
+    <string name="guild_modify_name_hint">限12个字哦～</string>
+    <string name="guild_manager_pwd_hint">请输入公会管理密码</string>
+    <string name="guild_rename_confirm_content">公会改名只能使用%1$d次哦～你确定要提交改名申请吗？</string>
+    <string name="guild_new_guild_name">新的公会名称</string>
+    <string name="guild_security_verify">公会信息安全验证</string>
+    <string name="guild_name">公会名称</string>
+    
+    <string name="txt_user_info_invalid">用户登录信息无法通过校验</string>
+    <string name="txt_group_not_search_by_game_name">没找到噢，不如你去创建一个吧</string>
+    <string name="txt_total_numbers">%1$d人</string>
+    <string name="input_cannot_be_null">输入不能为空</string>
+    <string name="user">用户</string>
+    <string name="info_invalid">信息错误</string>
+
+    <string name="take_photo">拍照</string>
+    <string name="album">相册</string>
+
+    <string name="like">赞</string>
+    <string name="comment_guild_fedd">评论</string>
+    <string name="go_user_center_txt">去ta的个人主页</string>
+</resources>

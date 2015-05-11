@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <dimen name="header_text_size">18dip</dimen>
+    <dimen name="button_text_size">16dip</dimen>
+    <dimen name="webview_font_size">16dip</dimen>
+    <dimen name="search_text_size">16dip</dimen>
+    <dimen name="listview_item_text_size">16dip</dimen>
+    <dimen name="title_size">16dip</dimen>
+    <dimen name="content_size">14dip</dimen>
+    <dimen name="small_text_size">12dip</dimen>
+
+    <dimen name="home_mygame_slide_menu_height_small">72dip</dimen>
+
+    <dimen name="game_focus_height">150dp</dimen>
+    <dimen name="notify_logo_layout_width">42dip</dimen>
+    <dimen name="notify_logo_layout_height">42dip</dimen>
+
+    <dimen name="listview_item_height">44dip</dimen>
+    <dimen name="toolbar_button_height">36dip</dimen>
+
+    <!--注意，这两个值是因为布局上有4dip的阴影-->
+    <dimen name="top_bar_height">48dip</dimen>
+    <dimen name="bottom_bar_height">50dip</dimen>
+    <dimen name="nav_and_bottom_shadow_height">4dip</dimen>
+
+    <dimen name="top_bar_assistant_height">42dip</dimen>
+
+
+    <dimen name="button_height">40dip</dimen>
+
+    <dimen name="settings_item_height">48dip</dimen>
+    <dimen name="settings_item_text_size">16dip</dimen>
+    <dimen name="settings_item_desc_text_size">11dip</dimen>
+    
+    <dimen name="setting_item_tips_text_view_margin_top">3dp</dimen>
+    <dimen name="setting_item_padding_left">11dip</dimen>
+    <dimen name="setting_item_padding_right">11dip</dimen>
+    <dimen name="setting_item_head_image_width">40dp</dimen>
+    <dimen name="setting_item_head_image_height">30dp</dimen>
+    <dimen name="setting_item_head_image_margin_left">-6dp</dimen>
+    <dimen name="setting_item_head_image_margin_right">7dp</dimen>
+    <dimen name="setting_item_text_container_margin_right">10dp</dimen>
+    
+    <dimen name="setting_item_icon_margin_right">14dp</dimen>
+    
+    <dimen name="setting_item_option_value_text_view_text_size">16dip</dimen>
+    <dimen name="setting_item_item_option_value_text_view_margin_right">8dp</dimen>
+    
+    
+
+    <dimen name="round_corner_radius">4dip</dimen>
+
+
+    <dimen name="home_mygame_recent_launch_history_view_height">80dip</dimen>
+
+    <dimen name="checkbox_width">36dip</dimen>
+
+    <dimen name="home_mygame_slide_menu_shadow_height">4dip</dimen>
+    <dimen name="home_browser_bookmark_checkbox_width">28dip</dimen>
+    <dimen name="home_topnav_font_size">14dip</dimen>
+    
+    <dimen name="bottom_favorite_share_button_width">32dip</dimen>
+
+    <dimen name="nav_indicator_width_4_tab_item">70dip</dimen>
+    <dimen name="nav_indicator_width_3_tab_item">90dip</dimen>
+    <dimen name="nav_indicator_width_2_tab_item">130dip</dimen>
+    <dimen name="slideshow_indicator_item_margin">12dip</dimen>
+
+    <dimen name="small_font_size">10dip</dimen>
+    <dimen name="main_my_games_item_text_size">11dip</dimen>
+
+    <!--修改game_icon_width_height需要一并修改game_icon_width_height_frame_layout-->
+    <dimen name="game_icon_width_height">60dip</dimen>
+    <dimen name="game_icon_width_height_relativeLayout_width">76dip</dimen>
+    <dimen name="game_icon_width_height_relativeLayout_height">76dip</dimen>
+    <dimen name="game_icon_width_height_frame_layout">75dip</dimen>
+    
+    <dimen name="ad_pic_width">80dp</dimen>
+    <dimen name="ad_pic_height">60dp</dimen>
+    <dimen name="more_icon_width_height">68dip</dimen>
+    <dimen name="more_item_textsize">11dip</dimen>
+    
+    <dimen name="upgrade_messagebox_text_width">36dip</dimen>
+
+    <dimen name="listview_item_desc_interval">4dip</dimen>
+    <dimen name="listview_item_margin">10dip</dimen>
+
+    <dimen name="game_detail_download_text_size">15dip</dimen>
+    <dimen name="sdcard_content_margin_left">20dip</dimen>
+    <dimen name="sdcard_margin_left">12dip</dimen>
+
+    <dimen name="top_nav_bg_height">40dip</dimen>
+    <dimen name="top_nav_scoll_line_height">3dip</dimen>
+
+    <dimen name="sliding_menu_shadow_width">20dip</dimen>
+    <dimen name="sliding_menu_behind_offset">60dip</dimen>
+    <dimen name="sliding_menu_behind_offset_zero">2dip</dimen>
+    <dimen name="sliding_menu_behind_item_height">48dip</dimen>
+    <dimen name="sliding_menu_behind_icon_height">52dip</dimen>
+    <dimen name="sliding_menu_behind_text_size">10dip</dimen>
+    <dimen name="sliding_menu_bottom_upgrade_text_size_never_check">14dip</dimen>
+    <dimen name="sliding_menu_bottom_upgrade_text_size_checked">10dip</dimen>
+
+    <dimen name="notice_bar_height">44dip</dimen>
+    <dimen name="notice_bar_header_text_size">14dip</dimen>
+    <dimen name="notice_bar_content_text_size">12dip</dimen>
+    <dimen name="notice_bar_icon_size">32dip</dimen>
+    <dimen name="notice_bar_button_height">32dip</dimen>
+    <dimen name="notice_bar_button_width">48dip</dimen>
+    <dimen name="notice_bar_button_text_size">14dip</dimen>
+
+    <dimen name="mygame_draw_round_rect">10dip</dimen>
+    <dimen name="mygame_draw_round_rect_2">2dip</dimen>
+
+    <dimen name="round_rect_bg_stroke_thickness">0.5dip</dimen>
+
+    <dimen name="recommend_line_margin">16dip</dimen>
+
+    <dimen name="pkgs_icon_width_height">48dip</dimen>
+
+    <dimen name="download_manager_menu_height">44dip</dimen>
+    <dimen name="my_game_menu_height">60dip</dimen>
+    <dimen name="my_game_menu_text_size">14dip</dimen>
+    <dimen name="download_popup_window_distance">12dip</dimen>
+    <dimen name="main_tab_height">44dip</dimen>
+
+   <!-- <dimen name="assistant_margin_left_landspace">200dip</dimen>
+    <dimen name="assistant_margin_left_protrait">40dip</dimen>-->
+    <dimen name="assistant_show_width_landspace">333dip</dimen>
+    <dimen name="assistant_show_width_protrait">280dip</dimen>
+    <dimen name="assistant_listview_item_height">70dip</dimen>
+    <dimen name="assistant_listview_item_btn_height">40dip</dimen>
+    <dimen name="assistant_listview_item_btn_width">70dip</dimen>
+    <dimen name="assistant_listview_item_btn_padding">4dip</dimen>
+    <dimen name="assistant_item_height">84dip</dimen>
+    <!--<dimen name="assistant_item_width_horizontal">220dip</dimen>-->
+    <!--<dimen name="assistant_item_width_vertical">220dip</dimen>-->
+    <dimen name="assistant_item_margin_bottom">4dip</dimen>
+    <dimen name="assistant_item_margin_left">15dip</dimen>
+    <dimen name="assistant_menu_margin_left">4dip</dimen>
+    <dimen name="assistant_llbtn_width">84dip</dimen>
+    <dimen name="assistant_tip_text_size">8dip</dimen>
+    <dimen name="assistant_btn_margin_top">20dip</dimen>
+    <dimen name="assistant_icon_height_width">52dip</dimen>
+    <dimen name="assistant_img_width_landspace">220dip</dimen>
+    <dimen name="assistant_img_width_protrait">204dip</dimen>
+
+    <dimen name="assistant_contant_margin_top">10dip</dimen>
+
+    <dimen name="animation_toast_margin_bottom_height">20dip</dimen>
+    <dimen name="toast_header_text_size">16dip</dimen>
+    <dimen name="toast_content_text_size">12dip</dimen>
+
+    <dimen name="home_page_title_text_size_1">14dip</dimen>
+    <dimen name="home_page_title_text_size_2">12dip</dimen>
+    <dimen name="home_page_rank_tips_text_size_1">10dip</dimen>
+    <dimen name="home_page_item_margin_top_1">5dip</dimen>
+    <dimen name="home_page_panel_padding_left_right_1">16dip</dimen>
+    <dimen name="home_page_panel_padding_left_right_2">10dip</dimen>
+    <dimen name="home_page_panel_padding_top_bottom_1">8dip</dimen>
+    <dimen name="home_page_panel_padding_top_bottom_2">12dip</dimen>
+    <dimen name="home_page_panel_margin_left_1">8dip</dimen>
+    <dimen name="home_page_panel_header_bar_height">48dip</dimen>
+    <dimen name="home_page_panel_tv_spacing_1">2dip</dimen>
+    <dimen name="home_page_panel_tv_spacing_2">1dip</dimen>
+    <dimen name="home_page_panel_tv_spacing_3">1dip</dimen>
+    <dimen name="home_page_panel_tv_margin_left">5dip</dimen>
+    <dimen name="home_page_line_spacing">3dp</dimen>
+
+    <dimen name="layout_progress_text_imageview_margin_1">8dip</dimen>
+    <dimen name="layout_progress_text_imageview_margin_2">10dip</dimen>
+    <dimen name="slide_view_height">133dp</dimen>
+
+    <dimen name="home_page_panel_margin">12dip</dimen>
+
+    <!--add in 2.5.0 homepage opt start-->
+    <dimen name="merge_layout_grid_hot_degree_image_height">10dip</dimen>
+    <dimen name="merge_layout_grid_hot_degree_image_width">7dip</dimen>
+    <dimen name="home_page_list_header_height">40dip</dimen>
+    <dimen name="home_page_list_header_text_size">13dip</dimen>
+    <dimen name="home_page_list_item_height">44dip</dimen>
+    <dimen name="home_page_list_item_text_size">13dip</dimen>
+    <dimen name="home_page_open_server_list_item_padding_left">16dip</dimen>
+    <dimen name="home_page_open_server_list_item_padding_right">10dip</dimen>
+    <dimen name="home_page_open_server_list_column_1_width">124dip</dimen>
+    <dimen name="home_page_open_server_list_column_2_width">108dip</dimen>
+    <dimen name="home_page_open_server_list_column_3_width">56dip</dimen>
+    <dimen name="home_page_open_server_list_column_3_button_width">24dip</dimen>
+    <dimen name="home_page_open_server_list_column_3_button_height">24dip</dimen>
+    <dimen name="home_page_open_server_list_column_4_width">48dip</dimen>
+    <dimen name="home_page_open_server_list_column_4_height">30dip</dimen>
+    <dimen name="upgrade_message_box_width">280dip</dimen>
+    
+    <dimen name="home_page_720p_text_size_1">20dp</dimen>
+    <dimen name="home_page_720p_text_size_2">18dp</dimen>
+    <dimen name="home_page_720p_text_size_3">16dp</dimen>
+    <dimen name="home_page_720p_text_size_4">14dp</dimen>
+    <dimen name="home_page_720p_text_size_5">13dp</dimen>
+    <dimen name="home_page_720p_text_size_6">12dp</dimen>
+    
+    <dimen name="home_page_icon_width_height_small">44dip</dimen>
+    <dimen name="home_page_icon_width_height_small_relativeLayout">60dip</dimen>
+    <dimen name="home_page_gift_width_height_small">18dip</dimen>
+
+    <dimen name="home_page_720p_panel_header_bar_padding_right">12dip</dimen>
+    <!--add in 2.5.0 homepage opt end-->
+
+    <dimen name="search_keyword_padding_top">8dip</dimen>
+    <dimen name="search_keyword_padding_bottom">8dip</dimen>
+    
+
+    <!-- 720 设计图高度，px/2-->
+    <dimen name="top_nav_bg_height_720">44dip</dimen>
+    <dimen name="top_nav_content_height_720">38dip</dimen>
+    <dimen name="top_nav_arrow_height_720">6dip</dimen>
+    <dimen name="nav_indicator_width_3_tab_item_720">13dip</dimen>
+    
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+
+    <!--add in 2.6.0.1 unicom freeflow start-->
+    <dimen name="home_page_advertising_space_height">52dip</dimen>
+    <!--add in 2.6.0.1 unicom freeflow end-->
+    <!--通知栏图标宽高-->
+    <dimen name="notify_icon_width_and_height">36dp</dimen>
+    
+    <!--首页最上方可下拉回弹图片高度与初始可视高度-->
+    <dimen name="home_image_header_height">462dp</dimen>
+    <dimen name="home_image_header_hide_top">-100dp</dimen>
+    <dimen name="home_image_header_hide_bottom">100dp</dimen>
+    <dimen name="home_image_header_visible_height">262dp</dimen>
+    <dimen name="home_searchbox_margin_top">48dp</dimen>
+
+    <!-- 个人中心 -->
+    <dimen name="user_info_img_scale">58dip</dimen>
+    <dimen name="menu_more_width">170dip</dimen>
+    
+    <!-- 个人资料 -->
+    <dimen name="user_avatar_scale">34dip</dimen>
+    
+    <!-- 发现 -->
+    <dimen name="discovery_list_item_height">48dp</dimen>
+    <dimen name="discovery_padding">12dip</dimen>
+    <dimen name="discovery_catalog_margin">12dip</dimen>
+    <dimen name="discovery_icon_size">26dip</dimen>
+    <dimen name="discovery_icon_margin">15dip</dimen>
+    <dimen name="discovery_text_margin">5dip</dimen>
+    <dimen name="discovery_image_size">34dip</dimen>
+
+
+    <!-- UI统一规范 -->
+    <dimen name="layout_margin_point">5dp</dimen>
+    <dimen name="layout_margin_top_point">12dp</dimen>
+
+    <dimen name="splash_margin_top">40dip</dimen>
+    <dimen name="logo_margin_bottom">40dip</dimen>
+    <dimen name="page_indicator">65dip</dimen>
+
+    <!-- 首页顶部大图尺寸 -->
+    <dimen name="hong_pic_height">462dip</dimen>
+    <dimen name="hong_pic_width">320dip</dimen>
+    <dimen name="float_window_width_icon">32dip</dimen>
+
+
+    <!-- window floationg -->
+    <dimen name="top_nav_height">48dp</dimen>
+
+    <dimen name="layout_padding_normal">15dp</dimen>
+    <dimen name="layout_padding_small">10dp</dimen>
+
+    <dimen name="item_normal_height">60dp</dimen>
+    <dimen name="float_window_height_business">320dp</dimen>
+    <dimen name="float_window_width_business">268dp</dimen>
+
+    <dimen name="text_size_large">17sp</dimen>
+    <dimen name="text_size_xlarge">20sp</dimen>
+
+    <dimen name="line_height">1px</dimen>
+    
+    <dimen name="close_window_width">160dip</dimen>
+    <dimen name="close_window_height">150dip</dimen>
+    <dimen name="close_window_hide_area_height">90dip</dimen>
+
+    <dimen name="floating_nav_window_width">42dip</dimen>
+    <dimen name="floating_nav_window_height">42dip</dimen>
+
+    <dimen name="floating_message_window_width">210dip</dimen>
+    <dimen name="floating_message_window_height">130dip</dimen>
+
+    <dimen name="floating_screen_overturn_window_width">240dip</dimen>
+    <dimen name="floating_screen_overturn_window_height">200dip</dimen>
+    
+    <dimen name="script_message_window_width">240dip</dimen>
+    <dimen name="script_message_window_height">170dip</dimen>
+    
+    <dimen name="floating_scriptrunning_btn_width">50dip</dimen>
+    <dimen name="floating_scriptrunning_btn_height">30dip</dimen>
+
+    <dimen name="tips_window_width">128dip</dimen>
+
+    <dimen name="floating_menu_offset">5dip</dimen>
+    
+    <dimen name="floating_text_margin">10dip</dimen>
+    <dimen name="floating_feedback_text_len">56dip</dimen>
+    <dimen name="floating_btn_max_len">200dip</dimen>
+    <dimen name="floating_btn_content_size">16dip</dimen>
+
+    <dimen name="floating_transparent_window_width">10dip</dimen>
+    <dimen name="floating_tips_pop_width">215dp</dimen>
+    <dimen name="floating_tips_pop_height">40dp</dimen>
+
+    <!-- 论坛端化 -->
+    <dimen name="forum_native_game_header_height">150dip</dimen>
+    <dimen name="forum_native_game_header_margin_top">32dip</dimen>
+    <dimen name="forum_native_game_header_padding_left">12dip</dimen>
+    <dimen name="forum_native_game_header_logo_size">60dp</dimen>
+    <dimen name="forum_native_category_search_height">44dip</dimen>
+    <dimen name="forum_native_theme_reply_item_margin">7dip</dimen>
+    <dimen name="forum_native_theme_list_item_pics_margin">10dip</dimen>
+    <dimen name="forum_native_theme_list_item_pics_size">75dip</dimen>
+    <dimen name="forum_native_theme_title_identifying_size">18dip</dimen>
+    <dimen name="forum_native_reply_divider_height">12dp</dimen>
+    <dimen name="forum_native_posts_attachment_margin">10dp</dimen>
+    <dimen name="forum_native_refresh_button_size">35dp</dimen>
+    <dimen name="forum_native_theme_item_image_size">44dp</dimen>
+    <dimen name="forum_native_theme_item_image_margin_right">8dp</dimen>
+    <dimen name="forum_native_theme_item_white_padding">12dp</dimen>
+
+    <!-- 表情 -->
+    <dimen name="emotion_grid_item_small_size">48dp</dimen>
+    <dimen name="emotion_img_small_size">40dp</dimen>
+    <dimen name="emotion_grid_small_spacing">4dp</dimen>
+
+    <dimen name="emotion_grid_item_size">50dp</dimen>
+    <dimen name="emotion_img_size">40dp</dimen>
+    <dimen name="emotion_grid_spacing">4dp</dimen>
+
+    <dimen name="emotion_large_grid_item_small_size">70dp</dimen>
+    <dimen name="emotion_large_img_small_size">60dp</dimen>
+    <dimen name="emotion_grid_middle_spacing">5dp</dimen>
+
+    <dimen name="emotion_large_grid_item_size">72dp</dimen>
+    <dimen name="emotion_large_img_size">62dp</dimen>
+    <dimen name="emotion_grid_large_spacing">8dp</dimen>
+
+    <dimen name="chat_page_emotion_list_height">140dp</dimen>
+    <dimen name="emotion_tab_height">40dp</dimen>
+    <dimen name="emotion_tab_text_size">16sp</dimen>
+
+    <dimen name="gallery_bottom_bg_height">50dip</dimen>
+    <dimen name="game_detail_pull_refresh_offset">5dp</dimen>
+    <dimen name="forum_edit_badege_width">15dip</dimen>
+    <dimen name="forum_icon_lz_margin_left_and_right">4dip</dimen>
+    <dimen name="common_tab_text_size">16dip</dimen>
+
+    <!--drop_down_list -->
+    <dimen name="drop_down_list_header_padding_top">12dp</dimen>
+    <dimen name="drop_down_list_header_padding_bottom">15dp</dimen>
+    <dimen name="drop_down_list_header_release_min_distance">20dp</dimen>
+    <dimen name="drop_down_list_header_progress_bar_height">36dp</dimen>
+    <dimen name="drop_down_list_footer_progress_bar_height">36dp</dimen>
+    <dimen name="drop_down_list_footer_button_margin_left">8dp</dimen>
+    <dimen name="drop_down_list_footer_button_height">48dp</dimen>
+
+
+    <!-- 3.4.0 公会端化 -->
+    <dimen name="guild_member_manage_popup_menu_width">160dip</dimen>
+    <dimen name="guild_member_manage_popup_menu_height">94dip</dimen>
+    
+    <dimen name="guild_info_title_text_size">12dip</dimen>
+    <dimen name="guild_info_text_margin_left">10dip</dimen>
+    <dimen name="guild_info_extend_view_height">35dip</dimen>
+    <dimen name="guild_selector_corner_radius">2dp</dimen>
+    
+    <!-- 3.4.0 通用字体 -->
+    <dimen name="text_size_12dp">12dp</dimen>
+    <dimen name="text_size_14dp">14dp</dimen>
+    <dimen name="text_size_16dp">16dp</dimen>
+    <dimen name="text_size_18dp">18dp</dimen>
+    <dimen name="text_size_20dp">20dp</dimen>
+
+    <dimen name="margin_10dp">10dp</dimen>
+    <dimen name="margin_12dp">12dp</dimen>
+    <dimen name="margin_14dp">14dp</dimen>
+    <dimen name="margin_16dp">16dp</dimen>
+    <dimen name="margin_18dp">18dp</dimen>
+    <dimen name="margin_15dp">15dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    
+    <!-- guild modify password -->
+    <dimen name="guild_error_tips_drawable_padding">5dip</dimen>
+    <dimen name="guild_error_tips_text_size">14dip</dimen>
+    <dimen name="guild_error_tips_margin_left">10dip</dimen>
+    <dimen name="guild_error_tips_margin_top_bottom">15dip</dimen>
+    
+    <dimen name="guild_forget_password_text_size">16dip</dimen>
+    <dimen name="guild_save_button_margin_left_right">10dip</dimen>
+    <dimen name="guild_save_button_height">40dip</dimen>
+    <dimen name="guild_save_button_margin_top">15dip</dimen>
+    
+    <dimen name="guild_info_interval_height">10dip</dimen>
+    
+    <dimen name="guild_get_back_password_text_size">12dip</dimen>
+    
+    <dimen name="guild_info_logo_width_height">60dip</dimen>
+    
+    <dimen name="menu_more_margin_right">3dip</dimen>
+
+    <dimen name="guild_group_item_height">45dip</dimen>
+
+    <dimen name="popmenu_width">190.0dip</dimen>
+    <dimen name="popmenu_yoff">1.0dip</dimen>
+
+    <dimen name="home_page_navigate_bar_height">47.5dip</dimen>
+    <dimen name="home_page_photo_view_height_one_line">142.5dip</dimen>
+    <dimen name="home_page_photo_view_height_two_line">172.5dip</dimen>
+    <dimen name="home_page_background_height">320dip</dimen>
+    <dimen name="home_page_background_margin_top">-100dip</dimen>
+    <dimen name="home_page_top_view_height">220dip</dimen>
+
+
+    <dimen name="photo_view_bottom_height">50dip</dimen>
+    <dimen name="homepage_game_item_height">60dip</dimen>
+    <dimen name="homepage_game_img_size">44dip</dimen>
+    <dimen name="homepage_nav_bar_height">45dip</dimen>
+    <dimen name="homepage_photo_view_height">230dip</dimen>
+
+    <dimen name="guild_topic_item_content_left_margin">68dip</dimen>
+    <dimen name="ng_dialog_default_center_margin">25dp</dimen>
+
+    <dimen name="my_threads_header_height">34dp</dimen>
+</resources>
