@@ -22,7 +22,8 @@ public class MainActivity extends FragmentActivity {
         FragmentTransaction ft = fm.beginTransaction();
 
         Fragment fragment = new ContactListFragment();
-        ft.add(R.id.container, fragment);
+//        ft.add(R.id.container, fragment);
+        ft.replace(R.id.container,fragment);
         ft.commit();
     }
 }

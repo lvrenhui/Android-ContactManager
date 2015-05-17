@@ -1,5 +1,6 @@
 package com.uc.contactmanager.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -17,7 +18,6 @@ import com.uc.contactmanager.common.basic.BasicListener;
 import com.uc.contactmanager.common.tool.ContactUtil;
 import com.uc.contactmanager.common.tool.L;
 import com.uc.contactmanager.model.Contact;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -30,7 +30,7 @@ import java.util.List;
  */
 public class ContactListFragment extends Fragment {
 
-    private List<Contact> mContactlist = new ArrayList<Contact>();
+    private List<Contact> mContactlist = new ArrayList<>();
     ;
     private View mRootView;
     private ListView mListView;
@@ -67,6 +67,10 @@ public class ContactListFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Contact c = mContactlist.get(position);
                 Toast.makeText(getActivity().getApplicationContext(), c.getMobile(), Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(getActivity(),ContactFragment.class);
+                intent.putExtra("pos", position);
+                startActivity(intent);
+
             }
         });
         getContactList();
@@ -112,7 +116,7 @@ public class ContactListFragment extends Fragment {
     }
 
     private void showLoading(boolean b) {
-        int visible = b == true ? View.VISIBLE : View.INVISIBLE;
+        int visible = b ? View.VISIBLE : View.INVISIBLE;
         mLoadingView.setVisibility(visible);
     }
 
