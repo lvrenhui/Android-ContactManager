@@ -113,4 +113,7 @@ public class L {
         }
     }
 
+    public static void w(Exception e) {
+            e.printStackTrace();
+    }
 }

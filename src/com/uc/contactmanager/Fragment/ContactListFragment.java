@@ -12,7 +12,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
-import com.example.contactmanager.R;
+import com.uc.contactmanager.R;
 import com.uc.contactmanager.biz.ContactAdapter;
 import com.uc.contactmanager.common.basic.BasicListener;
 import com.uc.contactmanager.common.tool.ContactUtil;
@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * Created by lvrh on 2015/5/9.
  */
-public class ContactListFragment extends Fragment {
+public class ContactListFragment extends BaseFragment {
 
     private List<Contact> mContactlist = new ArrayList<>();
     ;
