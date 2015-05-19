@@ -1,13 +1,10 @@
 package com.uc.contactmanager.biz;
 
 import android.content.Context;
-import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.SectionIndexer;
 import android.widget.TextView;
 import com.uc.contactmanager.R;
 import com.uc.contactmanager.model.Contact;
@@ -48,7 +45,7 @@ public class ContactAdapter extends BaseAdapter {
         ViewHolder holder = null;
         if (convertView == null) {
             holder = new ViewHolder();
-            convertView = mInflater.inflate(R.layout.contact, null);
+            convertView = mInflater.inflate(R.layout.contact_item, null);
 
             holder.tvName = (TextView) convertView.findViewById(R.id.contact_name);
             holder.tvMobile = (TextView) convertView.findViewById(R.id.contact_mobile);

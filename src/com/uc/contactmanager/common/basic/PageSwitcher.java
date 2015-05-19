@@ -8,7 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import com.uc.contactmanager.activity.BaseFragmentActivity;
 import com.uc.contactmanager.activity.MainActivity;
-import com.uc.contactmanager.activity.BaseSubActivity;
+import com.uc.contactmanager.activity.SubActivity;
 import com.uc.contactmanager.app.ContactApplication;
 import com.uc.contactmanager.common.tool.L;
 
@@ -58,14 +58,6 @@ public class PageSwitcher {
         switchToSubPage(context, fragmentType, null);
     }
 
-    public static void switchToSubPage2(Fragment fragment, int fragmentType, Bundle bundle) {
-        Intent intent = new Intent(fragment.getActivity(), BaseSubActivity.class);
-        intent.putExtra(BaseSubActivity.INTENT_EXTRA_FRAGMENT_TYPE, fragmentType);
-        if (bundle != null) {
-            intent.putExtra(BaseFragmentActivity.INTENT_EXTRA_FRAGMENT_ARGS, bundle);
-        }
-        fragment.startActivityForResult(intent, 1);
-    }
 
     /**
      *
@@ -106,8 +98,8 @@ public class PageSwitcher {
      * @param bundle
      * */
     public static void switchToSubPage(Context context, int fragmentType, Bundle bundle) {
-        Intent intent = new Intent(context, BaseSubActivity.class);
-        intent.putExtra(BaseSubActivity.INTENT_EXTRA_FRAGMENT_TYPE, fragmentType);
+        Intent intent = new Intent(context, SubActivity.class);
+        intent.putExtra(SubActivity.INTENT_EXTRA_FRAGMENT_TYPE, fragmentType);
         if (bundle != null) {
             intent.putExtra(BaseFragmentActivity.INTENT_EXTRA_FRAGMENT_ARGS, bundle);
         }
@@ -124,8 +116,8 @@ public class PageSwitcher {
      * */
     public static void switchToSubPage(Context context, int fragmentType, boolean useCache, Bundle bundle) {
         ContactApplication app = ContactApplication.getInstance();
-        Intent intent = new Intent(app, BaseSubActivity.class);
-        intent.putExtra(BaseSubActivity.INTENT_EXTRA_FRAGMENT_TYPE, fragmentType);
+        Intent intent = new Intent(app, SubActivity.class);
+        intent.putExtra(SubActivity.INTENT_EXTRA_FRAGMENT_TYPE, fragmentType);
 //        intent.putExtra(SubActivity.INTENT_EXTRA_FRAGMENT_USE_CACHE, useCache);
         if (bundle != null) {
             intent.putExtra(BaseFragmentActivity.INTENT_EXTRA_FRAGMENT_ARGS, bundle);

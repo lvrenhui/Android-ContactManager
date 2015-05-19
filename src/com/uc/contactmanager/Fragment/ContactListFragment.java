@@ -13,8 +13,10 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 import com.uc.contactmanager.R;
+import com.uc.contactmanager.app.ContactApplication;
 import com.uc.contactmanager.biz.ContactAdapter;
 import com.uc.contactmanager.common.basic.BasicListener;
+import com.uc.contactmanager.common.basic.PageSwitcher;
 import com.uc.contactmanager.common.tool.ContactUtil;
 import com.uc.contactmanager.common.tool.L;
 import com.uc.contactmanager.model.Contact;
@@ -66,10 +68,9 @@ public class ContactListFragment extends BaseFragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 Contact c = mContactlist.get(position);
-                Toast.makeText(getActivity().getApplicationContext(), c.getMobile(), Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(getActivity(),ContactFragment.class);
                 intent.putExtra("pos", position);
-                startActivity(intent);
+                PageSwitcher.switchToSubPage(ContactApplication.getInstance(),FragmentFactory.FRAGMENT_TYPE_CONTACT);
 
             }
         });

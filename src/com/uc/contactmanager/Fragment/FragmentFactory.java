@@ -19,7 +19,7 @@ import com.uc.contactmanager.common.tool.L;
 public class FragmentFactory {
 
     public final static int FRAGMENT_TYPE_CONTACT_LIST = 1001;
-
+    public static final int FRAGMENT_TYPE_CONTACT = 1002;
 
 
     private SparseArray<BaseFragment> mFragmentCache = new SparseArray<BaseFragment>();
@@ -42,7 +42,9 @@ public class FragmentFactory {
             case FRAGMENT_TYPE_CONTACT_LIST:
                 fragment = new ContactListFragment();
                 break;
-
+            case FRAGMENT_TYPE_CONTACT:
+                fragment=new ContactFragment();
+                break;
             default:
                 throw new RuntimeException(String.format("Can not find fragment with type: %d" , type));
 
