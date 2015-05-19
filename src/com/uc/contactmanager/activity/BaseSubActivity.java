@@ -14,7 +14,7 @@ import com.uc.contactmanager.common.tool.L;
 /**
  * Created by lvrh on 15/5/18.
  */
-public class SubActivity extends BaseFragmentActivity {
+public class BaseSubActivity extends BaseFragmentActivity {
     public final static String INTENT_EXTRA_FRAGMENT_TYPE = "type";
     public final static String INTENT_EXTRA_FRAGMENT_ARGS = "args";
     public final static String BUNDLE_FRAGMENT_CACHE = "cache";

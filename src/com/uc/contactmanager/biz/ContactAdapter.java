@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.SectionIndexer;
 import android.widget.TextView;
-import com.example.contactmanager.R;
+import com.uc.contactmanager.R;
 import com.uc.contactmanager.model.Contact;
 
 import java.util.List;

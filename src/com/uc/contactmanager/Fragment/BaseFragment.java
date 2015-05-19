@@ -4,18 +4,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.os.Looper;
 import android.support.v4.app.Fragment;
-import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.*;
 import android.view.animation.Animation;
-import com.uc.contactmanager.R;
-import com.uc.contactmanager.activity.SubActivity;
+import com.uc.contactmanager.activity.BaseSubActivity;
 import com.uc.contactmanager.app.ContactApplication;
 import com.uc.contactmanager.common.tool.L;
-
-import java.util.ArrayList;
 
 /**
  * Created by lvrh on 15/5/18.
@@ -51,8 +46,8 @@ public class BaseFragment extends Fragment{
         return ((Object) this).getClass().getSimpleName();
     }
 
-    protected SubActivity getSubActivity() {
-        return (SubActivity) getActivity();
+    protected BaseSubActivity getSubActivity() {
+        return (BaseSubActivity) getActivity();
     }
 
     @Override
@@ -280,8 +275,8 @@ public class BaseFragment extends Fragment{
 
     public void popCurrentFragment() {
         Activity activity = getActivity();
-        if (activity instanceof SubActivity) {
-            ((SubActivity) activity).popFragment();
+        if (activity instanceof BaseSubActivity) {
+            ((BaseSubActivity) activity).popFragment();
         }
     }
 

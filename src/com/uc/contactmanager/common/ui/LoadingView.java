@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import com.example.contactmanager.R;
+import com.uc.contactmanager.R;
 
 /**
  * Created by lvrh on 2015/5/10.

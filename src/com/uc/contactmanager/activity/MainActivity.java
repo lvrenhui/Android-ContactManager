@@ -6,7 +6,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import com.uc.contactmanager.Fragment.ContactListFragment;
+import com.uc.contactmanager.Fragment.FragmentFactory;
 import com.uc.contactmanager.R;
+import com.uc.contactmanager.app.ContactApplication;
+import com.uc.contactmanager.common.basic.PageSwitcher;
 
 public class MainActivity extends BaseFragmentActivity {
     /**
@@ -26,6 +29,8 @@ public class MainActivity extends BaseFragmentActivity {
         mainActivity=this;
 //        setContentView(R.layout.main);
 
+        PageSwitcher.switchToSubPage(ContactApplication.getInstance(), FragmentFactory.FRAGMENT_TYPE_CONTACT_LIST);
+
 //        FragmentManager fm = getSupportFragmentManager();
 //        FragmentTransaction ft = fm.beginTransaction();
 //
@@ -38,4 +43,6 @@ public class MainActivity extends BaseFragmentActivity {
     public static Activity getMainActivity() {
         return mainActivity;
     }
+
+
 }
