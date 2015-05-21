@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/top_bar_height"
+    android:background="@drawable/nav_bg"
+    android:gravity="center_vertical" >
+
+    <ImageButton
+        android:id="@+id/btnHeaderBarBack"
+        style="@style/home_top_nav_text_style"
+        android:layout_width="48dip"
+        android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/tvHeaderBarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:singleLine="true"
+        android:layout_toRightOf="@+id/btnHeaderBarBack"
+        android:layout_toLeftOf="@+id/rightStub"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:textColor="@color/nav_title_text_color"
+        android:textSize="@dimen/header_text_size" />
+
+    <cn.ninegame.gamemanager.biz.base.ui.ActionMoreView
+        android:id="@+id/btnMore"
+        android:layout_width="48dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        />
+
+    <TextView
+            android:id="@+id/tvTitleRight"
+            android:layout_width="48dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:singleLine="true"
+            android:gravity="center"
+            android:ellipsize="end"
+            android:textColor="@color/nav_title_text_color_3"
+            android:textSize="@dimen/button_text_size"
+            android:visibility="gone"/>
+    <View
+            android:id="@+id/rightStub"
+            android:layout_width="48dip"
+              android:layout_height="fill_parent"
+              android:layout_alignParentRight="true"
+              android:visibility="invisible"
+              android:background="@android:color/transparent"/>
+</RelativeLayout>
