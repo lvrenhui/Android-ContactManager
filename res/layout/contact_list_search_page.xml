@@ -7,9 +7,9 @@
 
     <include
         android:id="@+id/nav_bar"
-        layout="@layout/article_common_header_nav_bar" />
+        layout="@layout/common_header_nav_bar" />
 
-    <include layout="@layout/guild_search_bar" />
+    <include layout="@layout/common_search_bar" />
 
     <FrameLayout
         android:layout_width="fill_parent"

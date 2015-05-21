@@ -42,15 +42,6 @@
             android:contentDescription="@string/app_name"
             />
 
-<!--    <TextView android:id="@+id/loadingTv"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-              android:gravity="center"
-              android:text="@string/loading_text"
-              android:textColor="#f666"
-              android:visibility="gone"
-              android:textSize="20dip"/>-->
-
     <TextView android:id="@+id/loadingTv"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"

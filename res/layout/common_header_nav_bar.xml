@@ -23,7 +23,7 @@
         android:textColor="@color/nav_title_text_color"
         android:textSize="@dimen/header_text_size" />
 
-    <cn.ninegame.gamemanager.biz.base.ui.ActionMoreView
+    <com.uc.contactmanager.common.ui.ActionMoreView
         android:id="@+id/btnMore"
         android:layout_width="48dip"
         android:layout_height="fill_parent"

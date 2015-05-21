@@ -32,7 +32,7 @@
 
     </LinearLayout>
 
-    <cn.ninegame.gamemanager.biz.base.ui.LoadingView
+    <com.uc.contactmanager.common.ui.LoadingView
             android:id="@+id/loadingView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -8,7 +8,7 @@
         <item name="calendarViewStyle">@style/Widget.Holo.Light.CalendarView</item>
 
         <!-- 定制4.0系统ActionBar菜单的主题颜色，避免个别系统出现辨识菜单项的问题 -->
-        <item name="android:actionModeBackground">@color/action_mode_background</item>
+        <!--<item name="android:actionModeBackground">@color/action_mode_background</item>-->
 
     </style>
     
@@ -343,12 +343,7 @@
         <item name="android:background">@drawable/btn_bg_home_orange_selector</item>
     </style>
     
-    <style name="forum_reply_comment_btn_style" parent="@style/home_page_btn_bg_orange_style">
-        <item name="android:layout_width">45dip</item>
-        <item name="android:minWidth">45dip</item>
-        <item name="android:background">@drawable/btn_bg_forum_orange_selector</item>
-        <item name="android:textColor">@color/text_color_reply_gray_and_white_selector</item>
-    </style>
+
 
     <style name="home_page_rank_tips_text_style_1">
         <item name="android:textSize">@dimen/home_page_rank_tips_text_size_1</item>
@@ -382,12 +377,7 @@
         <item name="android:ellipsize">end</item>
         <item name="android:gravity">left|center_vertical</item>
     </style>
-    <!-- 对话框背景样式 -->
-    <style name="account_dialog_content_style">
-        <item name="android:layout_height">285dip</item>
-        <item name="android:layout_width">280dip</item>
-        <item name="android:background">@drawable/system_msgbox_bg</item>
-    </style>
+
     <!-- 登录提示信息文字样式 -->
     <style name="dialog_login_info_text_style">
         <item name="android:textColor">@color/light_black2</item>
@@ -395,19 +385,6 @@
         <item name="android:gravity">left|center_vertical</item>
     </style>
     
-    <style name="listview_style">
-        <item name="android:fadingEdge">none</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">fill_parent</item>
-        <item name="android:drawSelectorOnTop">false</item>
-        <item name="android:cacheColorHint">#00000000</item>
-        <item name="android:divider">@color/list_view_divider_color</item>
-        <item name="android:dividerHeight">1px</item>
-        <item name="android:listSelector">@drawable/listview_forum_cancel_selector</item>
-        <item name="android:fastScrollEnabled">false</item>
-        <item name="android:headerDividersEnabled">false</item>
-        <item name="android:fadeScrollbars">true</item>
-    </style>
 
     <!--add in 2.5.0 homepage opt start-->
     <style name="home_page_text_list_header">
@@ -510,23 +487,7 @@
         <item name="mdMenuSize">250dp</item>
     </style>
 
-    <style name="game_detail_rating_star" parent="@android:style/Widget.RatingBar">
-        <item name="android:progressDrawable">@drawable/game_detail_rating_star</item>
-        <item name="android:minHeight">11dip</item>
-        <item name="android:maxHeight">11dip</item>
-    </style>
 
-    <style name="game_detail_rating_star_excellent" parent="@android:style/Widget.RatingBar">
-        <item name="android:progressDrawable">@drawable/game_detail_excellent_rating_star</item>
-        <item name="android:minHeight">11dip</item>
-        <item name="android:maxHeight">11dip</item>
-    </style>
-
-    <!--add in 2.16.1-->
-    <style name="comment_rating_star"
-           parent="@android:style/Widget.RatingBar">
-        <item name="android:progressDrawable">@drawable/comment_rating_star</item>
-    </style>
     
     <!-- 九游默认的list样式 -->
     <style name="common_list_view_style">
@@ -538,31 +499,7 @@
         <item name="android:overScrollMode">never</item>
     </style>
     
-    <!-- 九游默认的edit text样式 -->
-    <style name="common_input_edit_style">
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_height">40dp</item>
-        <item name="android:background">@drawable/input_bg</item>
-        <item name="android:textSize">@dimen/home_page_720p_text_size_4</item>
-        <item name="android:paddingLeft">5dp</item>
-    </style>
-    
-    <!-- 九游默认的橙色风格按钮，TODO 大小不同的按钮继承或新增样式 -->
-    <style name="common_orange_btn_style">
-        <item name="android:layout_height">@dimen/button_height</item>
-        <item name="android:background">@drawable/btn_bg_system_orange_selector</item>
-        <item name="android:textColor">@color/text_color_gray_and_white_selector</item>
-        <item name="android:textSize">@dimen/button_text_size</item>
-    </style>
-    
-    <!-- 用户中心 -->
-    <style name="user_info_tab">
-        <item name="android:background">@drawable/listview_item_bg_selector</item>
-        <item name="android:clickable">true</item>
-        <item name="android:gravity">center</item>
-        <item name="android:textSize">@dimen/home_page_720p_text_size_4</item>
-        <item name="android:textColor">@color/home_page_720p_text_color_1</item>
-    </style>
+
     
     <style name="account_info_text_style" >
         <item name="android:textSize">@dimen/home_page_720p_text_size_3</item>
@@ -575,13 +512,7 @@
         <item name="android:textColor">@color/home_page_720p_text_color_1</item>
     </style>
 
-    <style name="account_btn_style">
-        <item name="android:layout_height">@dimen/account_submit_button_hight</item>
-        <item name="android:background">@drawable/account_btn_orange_selector</item>
-        <item name="android:textSize">@dimen/account_xxx_text_size</item>
-        <item name="android:textColor">@color/white</item>
-    </style>
-    
+
     <style name="pull_to_refresh_style">
         <item name="android:fadingEdge">none</item>
         <item name="android:fastScrollEnabled">false</item>
@@ -598,18 +529,7 @@
         <item name="ptrRefreshableViewBackground">@color/white</item>
     </style>
 
-    <style name="top_bar_title_center">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">fill_parent</item>
-        <item name="android:textColor">@color/color_33</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_marginLeft">48dip</item>
-        <item name="android:layout_marginRight">48dip</item>
-        <item name="android:layout_centerInParent">true</item>
-        <item name="android:textSize">@dimen/home_page_720p_text_size_1</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:ellipsize">end</item>
-    </style>
+
 
     <style name="crop_dialog" parent="android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
@@ -664,13 +584,7 @@
         <item name="android:layout_weight">1</item>
     </style>
 
-    <style name="guild_pop_menu_item">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">1px</item>
-        <item name="android:background">@drawable/guild_popup_menu_item_selector</item>
-        <item name="android:orientation">horizontal</item>
-    </style>
+
     
      <style name="guild_pop_menu_item_text">
         <item name="android:layout_width">0dp</item>
@@ -763,37 +677,7 @@
         <item name="android:paddingRight">12dip</item>
     </style>
 
-    <style name="HomePage_EditText_Style" >
-        <item name="android:textColorHint">@color/account_inputView_textColorHint</item>
-        <item name="android:textColor">@color/account_inputView_textColor</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:background">@null</item>
-        <item name="android:inputType">none</item>
-        <item name="android:textSize">16dip</item>
-    </style>
 
-    <style name="HomePage_Main_Text_Style" parent="@android:style/Widget.TextView" >
-        <item name="android:textColor">@color/account_inputView_textColor</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:background">@null</item>
-        <item name="android:textSize">16dip</item>
-    </style>
-
-    <style name="HomePage_Second_Text_Style" parent="@android:style/Widget.TextView" >
-        <item name="android:textColor">@color/account_inputView_textColorHint</item>
-        <item name="android:singleLine">true</item>
-        <item name="android:background">@null</item>
-        <item name="android:textSize">12dip</item>
-    </style>
-
-    <style name="HomePage_Content_Layout_Style" >
-        <item name="android:layout_height">48dip</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:background">@drawable/btn_white_gray</item>
-        <item name="android:paddingLeft">12dip</item>
-        <item name="android:paddingRight">12dip</item>
-        <item name="android:gravity">center_vertical</item>
-    </style>
     <style name="drop_down_list_header_progress_bar_style">
         <item name="android:minHeight">@dimen/drop_down_list_header_progress_bar_height</item>
         <item name="android:maxHeight">@dimen/drop_down_list_header_progress_bar_height</item>
@@ -820,8 +704,6 @@
         <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
     </style>
 
-    <style name="dash_divider_style">
-        <item name="android:background">@drawable/divider_line</item>
-    </style>
+
 
 </resources>

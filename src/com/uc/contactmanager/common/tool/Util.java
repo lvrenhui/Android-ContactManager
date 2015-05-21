@@ -1,5 +1,39 @@
 package com.uc.contactmanager.common.tool;
 
+import android.annotation.TargetApi;
+import android.app.*;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.content.pm.Signature;
+import android.content.res.AssetFileDescriptor;
+import android.content.res.Resources;
+import android.database.Cursor;
+import android.graphics.Paint;
+import android.media.MediaPlayer;
+import android.net.Uri;
+import android.os.*;
+import android.provider.MediaStore;
+import android.provider.Settings;
+import android.text.TextUtils;
+import android.text.format.Time;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
+import android.view.inputmethod.InputMethodManager;
+
+import org.apache.http.HttpEntity;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.*;
 import java.lang.Process;
 import java.lang.reflect.Constructor;
@@ -15,69 +49,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
-
-import android.app.*;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.pm.ApplicationInfo;
-import android.net.Uri;
-import android.os.*;
-import android.provider.Settings;
-import android.view.animation.AlphaAnimation;
-import android.content.pm.ResolveInfo;
-import android.database.Cursor;
-import android.graphics.Paint;
-import android.provider.MediaStore;
-import cn.ninegame.gamemanager.activity.MainActivity;
-import cn.ninegame.gamemanager.app.*;
-import cn.ninegame.gamemanager.app.state.EnvironmentState;
-import cn.ninegame.gamemanager.biz.base.ui.CustomToast;
-import cn.ninegame.gamemanager.biz.stat.BusinessStat;
-import cn.ninegame.gamemanager.biz.util.PackageUtil;
-import cn.ninegame.gamemanager.biz.util.RootPrivilegeManager;
-import cn.ninegame.gamemanager.config.SharePrefConstant;
-import cn.ninegame.gamemanager.lib.task.BackgroundHandler;
-import cn.ninegame.gamemanager.lib.task.TaskExecutor;
-import cn.ninegame.gamemanager.model.pojo.AnimationsToastInfo;
-import cn.ninegame.gamemanager.module.ipc.BackProcMessenger;
-import cn.ninegame.gamemanager.module.ipc.ProcessManager;
-import cn.ninegame.gamemanager.module.message.Message;
-import cn.ninegame.gamemanager.module.message.MessagePump;
-import org.apache.http.HttpEntity;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import android.annotation.TargetApi;
-import android.content.Context;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
-import android.content.res.AssetFileDescriptor;
-import android.content.res.Resources;
-import android.media.MediaPlayer;
-import android.text.TextUtils;
-import android.text.format.Time;
-import android.util.DisplayMetrics;
-import android.view.Display;
-import android.view.View;
-import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
-import android.view.inputmethod.InputMethodManager;
-import cn.ninegame.gamemanager.R;
-import cn.ninegame.gamemanager.biz.account.core.util.StringUtil;
-import cn.ninegame.gamemanager.biz.common.helper.InstalledGamesHelper;
-import cn.ninegame.gamemanager.biz.common.listener.OnProgressUpdateListener;
-import cn.ninegame.gamemanager.biz.fragment.PageSwitcher;
-import cn.ninegame.gamemanager.biz.util.BusinessUtil;
-import cn.ninegame.gamemanager.biz.util.NativeUtil;
-import cn.ninegame.gamemanager.model.database.NineGameDAOFactory;
-import cn.ninegame.gamemanager.model.database.dao.DownloadDAO;
-import cn.ninegame.gamemanager.model.pojo.DownloadRecord;
-import cn.ninegame.gamemanager.model.pojo.InstalledGameInfo;
-import cn.ninegame.gamemanager.module.log.L;
-import cn.ninegame.gamemanager.module.message.MessageData2;
-import cn.uc.security.MessageDigest;
 
 /**
  * Created with IntelliJ IDEA.
@@ -222,31 +193,6 @@ public class Util {
         return display.getWidth() + "x" + display.getHeight();
     }
 
-    /**
-     * 获取md5值
-     * @param str   需要md5的字符串
-     * @return md后的字符串
-     * **/
-    public static String getMD5String(String str) {
-        if (TextUtils.isEmpty(str))
-        {
-            return str;
-        }
-
-        try {
-            if (EnvironmentState.getInstance().getVersionCode() > 7) { //因为之前java版md5获取有误，兼容前面版本
-                return NativeUtil.getMd5(str);
-
-            } else {
-                return getMD5String(str.getBytes("utf-8"));
-            }
-
-        } catch (Exception e) {
-            L.w(e);
-        }
-
-        return null;
-    }
 
     @Deprecated
     /**
@@ -464,7 +410,7 @@ public class Util {
 
     /**
      * 格式化时间，例如20041216
-     * @param  timeMillis时间戳
+     * @timeMillis timeMillis时间戳
      * @return 格式化后的字符串
      * **/
     public static String formatTimeDate(long timeMillis) {
@@ -479,7 +425,7 @@ public class Util {
 
     /**
      * 格式化时间，例如20041216093000
-     * @param  timeMillis时间戳
+     * @timeMillis 时间戳
      * @return 格式化后的字符串
      * **/
     public static String formatTime_YYYY_MM_DD_HH_MM_SS(long timeMillis) {
@@ -505,7 +451,7 @@ public class Util {
 
     /**
      * 格式化时间，24小时制
-     * @param timeMillis时间戳
+     * @timeMillis 时间戳
      * @return 格式化后的字符串
      * **/
     public static String formatTime24(long timeMillis) {
@@ -710,63 +656,7 @@ public class Util {
 
     private final static int USE_FILE_COUNT_FOR_UNZIP_PROGRESS_THRESHOLD = 10;
 
-    /**
-     * 解压文件夹
-     * @param zipFileName   zip文件名
-     * @param destDir   解压目录
-     * @param listener  进度更新回调
-     * **/
-    public static boolean unzipFile(String zipFileName, File destDir, OnProgressUpdateListener listener) {
-        final byte[] buffer = new byte[4096];
-        BufferedInputStream bis = null;
-        ZipInputStream zis = null;
 
-        try {
-            if (listener != null) {
-                listener.onPrepare();
-            }
-
-            // make sure the directory is existent
-            destDir.mkdirs();
-            bis = new BufferedInputStream(new FileInputStream(zipFileName));
-            zis = new ZipInputStream(bis);
-            ZipEntry entry = null;
-            long totalSize = 0;
-            int fileCount = 0;
-
-            while ((entry = zis.getNextEntry()) != null) {
-                if (!entry.isDirectory())
-                    totalSize += entry.getSize();
-
-                fileCount++;
-            }
-
-            if (listener == null || fileCount >= USE_FILE_COUNT_FOR_UNZIP_PROGRESS_THRESHOLD) {
-                unzipUsingFileCountForProgressUpdate(zipFileName, destDir, listener, buffer, fileCount);
-
-            } else {
-                unzipUsingFileSizeForProgressUpdate(zipFileName, destDir, listener, buffer, totalSize);
-            }
-
-            if (listener != null) {
-                listener.onComplete();
-            }
-
-            return true;
-
-        } catch (IOException e) {
-            L.w(e);
-        } finally {
-            Util.closeCloseable(bis);
-            Util.closeCloseable(zis);
-        }
-
-        if (listener != null) {
-            listener.onError();
-        }
-
-        return false;
-    }
 
     /**
      * 获取zip文件中的根目录
@@ -801,239 +691,7 @@ public class Util {
         return null;
     }
 
-    /**
-     * 解压文件数目，用于进度更新
-     * @param fileCount   zip文件count
-     * @param destDir   解压目录
-     * @param listener  进度更新回调
-     * @param buffer  解压的文件字节流
-     * **/
-    private static void unzipUsingFileCountForProgressUpdate(String zipFileName, File destDir, OnProgressUpdateListener listener, byte[] buffer, int fileCount) {
-        int count = 0;
-        ZipInputStream zis = null;
 
-        try {
-            // make sure the directory is existent
-            destDir.mkdirs();
-            zis = new ZipInputStream(new FileInputStream(zipFileName));
-            ZipEntry entry;
-            int bufSize = 1024 * 32;
-
-            while ((entry = zis.getNextEntry()) != null) {
-                String fileName = entry.getName();
-
-                if (entry.isDirectory()) {
-                    new File(destDir, fileName).mkdirs();
-
-                } else {
-                    File file = new File(destDir, fileName);
-                    File parent = file.getParentFile();
-
-                    if (parent != null && !parent.exists())
-                        parent.mkdirs();
-
-                    BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file), bufSize);
-                    int lenRead;
-
-                    while ((lenRead = zis.read(buffer)) != -1) {
-                        bos.write(buffer, 0, lenRead);
-                    }
-
-                    bos.flush();
-                    bos.close();
-                }
-
-                if (listener != null) {
-                    listener.onProgressUpdate((int) (++count * 100f / fileCount));
-                }
-
-                zis.closeEntry();
-            }
-
-        } catch (IOException e) {
-            L.w(e);
-        } finally {
-            Util.closeCloseable(zis);
-        }
-    }
-
-    /**
-     * 解压文件大小，用于进度更新
-     * @param totalSize   zip文件 size
-     * @param destDir   解压目录
-     * @param listener  进度更新回调
-     * @param buffer  解压的文件字节流
-     * **/
-    private static void unzipUsingFileSizeForProgressUpdate(String zipFileName, File destDir, OnProgressUpdateListener listener, byte[] buffer, long totalSize) {
-        ZipInputStream zis = null;
-
-        try {
-            // make sure the directory is existent
-            destDir.mkdirs();
-            zis = new ZipInputStream(new FileInputStream(zipFileName));
-            ZipEntry entry;
-            int bufSize = 1024 * 32;
-            long totalWrite = 0;
-            int lastUpdatedProgress = 0;
-
-            while ((entry = zis.getNextEntry()) != null) {
-                String fileName = entry.getName();
-
-                if (entry.isDirectory()) {
-                    new File(destDir, fileName).mkdirs();
-
-                } else {
-                    File file = new File(destDir, fileName);
-                    File parent = file.getParentFile();
-
-                    if (parent != null && !parent.exists())
-                        parent.mkdirs();
-
-                    BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file), bufSize);
-                    int lenRead;
-
-                    while ((lenRead = zis.read(buffer)) != -1) {
-                        bos.write(buffer, 0, lenRead);
-                        totalWrite += lenRead;
-                        int progress = (int)(totalWrite * 100 / totalSize);
-
-                        if (progress > lastUpdatedProgress) {
-                            if (listener != null) {
-                                listener.onProgressUpdate(progress);
-                            }
-
-                            lastUpdatedProgress = progress;
-                        }
-                    }
-
-                    bos.flush();
-                    bos.close();
-                }
-
-                zis.closeEntry();
-            }
-
-        } catch (IOException e) {
-            L.w(e);
-            if(listener != null)
-                listener.onError();
-        } finally {
-            Util.closeCloseable(zis);
-        }
-    }
-
-    /**
-     * 解压文件
-     * @param destDir   解压目录
-     * @param fis  解压的文件流
-     * **/
-    public static boolean unzipFile(InputStream fis, File destDir) {
-        final byte[] buffer = new byte[4096];
-        ZipInputStream zis = null;
-
-        try {
-            // make sure the directory is existent
-            destDir.mkdirs();
-            zis = new ZipInputStream(fis);
-            ZipEntry entry;
-
-            while ((entry = zis.getNextEntry()) != null) {
-                String fileName = entry.getName();
-
-                if (entry.isDirectory()) {
-                    new File(destDir, fileName).mkdirs();
-
-                } else {
-                    BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(new File(destDir, fileName)));
-                    int lenRead;
-
-                    while ((lenRead = zis.read(buffer)) != -1) {
-                        bos.write(buffer, 0, lenRead);
-                    }
-
-                    bos.close();
-                }
-
-                zis.closeEntry();
-            }
-
-            return true;
-
-        } catch (IOException e) {
-            L.w(e);
-        } finally {
-            Util.closeCloseable(zis);
-        }
-
-        return false;
-    }
-
-    /**
-     * 删除文件
-     * @param path  需要删除的文件路径
-     * **/
-    public static void deleteFile(String path) {
-        if (path != null) {
-            File file = new File(path);
-
-            if (file.exists())
-                file.delete();
-        }
-    }
-
-    /**
-     * 取得文件名满足所指定的规则表达式的文件列表 ";"隔开
-     */
-    /*public static FilenameFilter getFileExtensionFilterByExpStr(String exp) {
-        final String[] expArr = exp.split(";");
-        return new FilenameFilter() {
-            public boolean accept(File file, String name) {
-                boolean flag = false;
-
-                for (int i = 0; i < expArr.length; i++) {
-                    if (name.endsWith(expArr[i]))
-                        flag = true;
-
-                    ;
-                }
-
-                return flag;
-            }
-        };
-    }*/
-
-
-    // from stackoverflow.com: http://stackoverflow.com/a/3549021/668963
-    /*public static Bitmap decodeFile(File f, int maxWidth, int maxHeight) {
-        Bitmap b = null;
-
-        try {
-            //Decode image size
-            BitmapFactory.Options o = new BitmapFactory.Options();
-            o.inJustDecodeBounds = true;
-            FileInputStream fis = new FileInputStream(f);
-            BitmapFactory.decodeStream(fis, null, o);
-            fis.close();
-            int scale = 1;
-
-            if (o.outHeight > maxHeight || o.outWidth > maxWidth) {
-                scale = (int)Math.pow(2, (int) Math.round(Math.log(maxWidth /
-                                      (double) Math.max(o.outHeight, o.outWidth)) / Math.log(0.5)));
-            }
-
-            //Decode with inSampleSize
-            BitmapFactory.Options o2 = new BitmapFactory.Options();
-            o2.inSampleSize = scale;
-            fis = new FileInputStream(f);
-            b = BitmapFactory.decodeStream(fis, null, o2);
-            fis.close();
-
-        } catch (IOException e) {
-            L.w(e);
-        }
-
-        return b;
-    }*/
 
     /**
      * 获取apk的签名
@@ -1167,140 +825,6 @@ public class Util {
         return isExistSDcard;
     }
 
-    /**
-     * 获取sdcard总大小以及可用大小
-     * return  MessageData2<已用大小Long, 总大小Long>
-     *
-     */
-    /*private static String maxSdcardDir;//最大的sdcard
-    public static MessageData2<Long, Long> getSdcardSize(){
-        MessageData2<Long, Long> sdcardSizeMessage = null;
-        String status = Environment.getExternalStorageState();
-
-    //        // 是否只读
-        if (status.equals(Environment.MEDIA_MOUNTED_READ_ONLY)) {
-            status = Environment.MEDIA_MOUNTED;
-        }
-        if (status.equals(Environment.MEDIA_MOUNTED)) {
-            try {
-                if(maxSdcardDir==null || "".equals(maxSdcardDir)){
-                    String SDCARD_PARENT_DIR = "/mnt";
-                    File parentDir = new File(SDCARD_PARENT_DIR);
-                    File[] childfiles = parentDir.listFiles();
-
-                    if(childfiles == null || childfiles.length==0)
-                        return sdcardSizeMessage;
-
-                    long maxDirSize = 0;
-                    long fileLength = 0;
-                    StatFs stat;
-                    long blockSize;
-                    long totalBlocks;
-                    for(File file: childfiles){
-                        String SDCARD_STRING = "sdcard";
-                        if(file.getName().toLowerCase().contains(SDCARD_STRING)){
-                            stat = new StatFs(file.getPath());
-                            blockSize = stat.getBlockSize();
-                            totalBlocks = stat.getBlockCount();
-                            fileLength = totalBlocks * blockSize;
-                            if(file.isDirectory() && fileLength> maxDirSize){
-                                maxDirSize = fileLength;
-                                maxSdcardDir = file.getPath();
-                            }
-                        }
-                    }
-                }
-
-                StatFs stat = new StatFs(maxSdcardDir);
-                long blockSize = stat.getBlockSize();
-                long totalBlocks = stat.getBlockCount();
-                long availableBlocks = stat.getAvailableBlocks();
-                Long sdSize = totalBlocks * blockSize;
-                Long sdAvail = availableBlocks * blockSize;
-                sdcardSizeMessage = new MessageData2<Long, Long>(sdSize-sdAvail, sdSize);
-            } catch (IllegalArgumentException e) {
-                status = Environment.MEDIA_REMOVED;
-            }
-        }
-        return sdcardSizeMessage;
-    }*/
-    //又改回用默认的sd卡大小了
-    public static MessageData2<Long, Long> getSdcardSize() {
-        MessageData2<Long, Long> sdcardSizeMessage = null;
-        String status = Environment.getExternalStorageState();
-
-        // 是否只读
-        if (status.equals(Environment.MEDIA_MOUNTED_READ_ONLY)) {
-            status = Environment.MEDIA_MOUNTED;
-        }
-
-        if (status.equals(Environment.MEDIA_MOUNTED)) {
-            try {
-                File path = Environment.getExternalStorageDirectory();
-                StatFs stat = new StatFs(path.getPath());
-                long blockSize = stat.getBlockSize();
-                long totalBlocks = stat.getBlockCount();
-                long availableBlocks = stat.getAvailableBlocks();
-                Long sdSize = totalBlocks * blockSize;
-                Long sdAvail = availableBlocks * blockSize;
-                sdcardSizeMessage = new MessageData2<Long, Long>(sdSize - sdAvail, sdSize);
-
-            } catch (IllegalArgumentException e) {
-                L.w(e);
-                status = Environment.MEDIA_REMOVED;
-            }
-        }
-
-        return sdcardSizeMessage;
-    }
-    /**
-     * 获取手机内存总大小以及可用大小
-     * return  MessageData2<已用大小Long, 总大小Long>
-     *
-     */
-    /*public static MessageData2<Long, Long> getMemorySize() {
-        File path = Environment.getDataDirectory();
-        StatFs stat = new StatFs(path.getPath());
-        long blockSize = stat.getBlockSize();
-        long availableBlocks = stat.getAvailableBlocks();
-        long totalBlocks = stat.getBlockCount();
-        Long memoryAvail = availableBlocks * blockSize;
-        Long memorySize = totalBlocks * blockSize;
-        return new MessageData2<Long, Long>(memorySize - memoryAvail, memorySize);
-    }*/
-
-    /**
-     * 更新手机内存使用情况， 如果有外置sdcard则显示sdcard，没有则只显示手机内存
-     * @param list
-     *          List<MessageData2<Long, Long>> list.size=2  0:手机内存  1：sdcard
-     *          <Long, Long>已用大小，总大小
-     * ***/
-    public static List<MessageData2<String, Integer>> updateSize(List<MessageData2<Long, Long>> list) {
-        List<MessageData2<String, Integer>> returnMessageData = null;
-
-        if (list != null && list.size() > 1) {
-            returnMessageData = new ArrayList<MessageData2<String, Integer>>(2);
-            MessageData2<Long, Long> memoryMessage = list.get(0);
-            MessageData2<Long, Long> sdcardMessage = list.get(1);
-            MessageData2<String, Integer> message;
-
-            if (memoryMessage != null) {
-                if (sdcardMessage != null && !memoryMessage.o2.equals(sdcardMessage.o2)) {
-                    String sdcardString = Util.formatSizeInByte(sdcardMessage.o1) + "已用/" + Util.formatSizeInByte(sdcardMessage.o2);
-                    double progressSdcard = sdcardMessage.o1 / (double)sdcardMessage.o2 * 100;
-                    message = new MessageData2<String, Integer>(sdcardString, (int)progressSdcard);
-                    returnMessageData.add(message);
-                }
-
-                String memoryString = Util.formatSizeInByte(memoryMessage.o1) + "已用/" + Util.formatSizeInByte(memoryMessage.o2);
-                double progressMemory = memoryMessage.o1 / (double)memoryMessage.o2 * 100;
-                message = new MessageData2<String, Integer>(memoryString, (int)progressMemory);
-                returnMessageData.add(message);
-            }
-        }
-
-        return returnMessageData;
-    }
 
 
     /**
@@ -1497,7 +1021,7 @@ public class Util {
 
 
     public static boolean isGoodJson(String json) {
-        if (StringUtil.isNullOrEmpty(json)) {
+        if (json.isEmpty()) {
             return false;
         }
         try {
@@ -2110,168 +1634,6 @@ public class Util {
         return randomValue;
     }
 
-    /**
-     * m9编码
-     * @param data 需要编码的byte[]
-     * @return 编码后的byte[]
-     * **/
-    /*public static byte[] m9Encode(byte[] data) {
-        return MessageDigest.m9Encode(PLATFORM_GAME, data, M9_SECRET_KEY);
-    }*/
-
-    /**
-     * m9解码  this method is not thread-safe
-     * @param data  需要解码的byte[]
-     * @return 解码后的byte[]
-     * **/
-
-    public synchronized static int[] m9Decode(byte[] data) {
-        MessageDigest.m9Decode(data, M9_SECRET_KEY);
-        return new int[] { MessageDigest.M9_DECODE_DEST_OFFSET, data.length - MessageDigest.M9_DECODE_DEST_OFFSET_LENGTH };
-    }
-
-    public static List<MyItemDataWrapper> loadRecordsList() {
-        List<MyItemDataWrapper> itemDataWrapperList = new ArrayList<MyItemDataWrapper>();
-        NineGameClientApplication app = NineGameClientApplication.getInstance();
-        JSONObject gameSort = BusinessUtil.getPlayGameSort();
-        InstalledGamesHelper installedGamesHelper = InstalledGamesHelper.getInstance();
-        List<InstalledGameInfo> installedGameInfoList = installedGamesHelper.getInstalledGameList();
-
-        JSONObject gameSortObj;
-        long lastPlayTime;
-
-        // load the installed apps
-        for (InstalledGameInfo installedGameInfo : installedGameInfoList) {
-            boolean isGame = InstalledGamesHelper.getInstance().isGame(installedGameInfo.packageName);
-
-            if (!isGame) {
-                continue;
-            }
-
-            MyItemDataWrapper itemDataWrapper = new MyItemDataWrapper(installedGameInfo);
-
-            if (gameSort.has(installedGameInfo.packageName)) {
-                try {
-                    gameSortObj = gameSort.getJSONObject(installedGameInfo.packageName);
-
-                    if (gameSortObj.has(BusinessUtil.PLAY_GAME_SORT_LASTOPEN_TIME)) {
-                        lastPlayTime = gameSortObj.getLong(BusinessUtil.PLAY_GAME_SORT_LASTOPEN_TIME);
-                        itemDataWrapper.lastPlayTime = lastPlayTime;
-
-                        if (lastPlayTime == 0 && BusinessUtil.isWithinSevenDays(getFirstInstallTime(installedGameInfo))) {
-                            itemDataWrapper.isNewGame = true;
-                        }
-
-                    }
-
-                } catch (JSONException e) {
-                    L.w(e);
-                }
-            }
-
-            itemDataWrapperList.add(itemDataWrapper);
-        }
-
-        sortList(itemDataWrapperList, gameSort);
-        return itemDataWrapperList;
-    }
-
-    /**
-     * 列表排序
-     *
-     * 排序方式：分为3组，第一组是7天内（自然天）新安装的且没玩过的游戏（从非客户端安装的也算）；第二组是已玩过的游戏；第三组是7天后新安装的且没玩过的游戏（从非客户端安装的也算）；
-     * 组间排序：第一组＞第二组＞第三组
-     * 组内排序--第一组：安装时间距离现在最近的新安装的排在前面。
-     * 组内排序--第二组：最近玩的排在最前；
-     * 组内排序--第三组：安装时间距现在最近的在前。
-     * ***/
-    private static void sortList(List<MyItemDataWrapper> itemDataWrapperList, JSONObject gameSort) {
-        if (gameSort != null && gameSort.length() > 0) {
-            Collections.sort(itemDataWrapperList, new Comparator<MyItemDataWrapper>() {
-                @Override
-                public int compare(MyItemDataWrapper o1, MyItemDataWrapper o2) {
-                    if (o1.isNewGame && !o2.isNewGame) {
-                        return -1;
-
-                    } else if (!o1.isNewGame && o2.isNewGame) {
-                        return 1;
-
-                    } else {
-                        if (o1.lastPlayTime == null && o2.lastPlayTime != null) {
-                            return o2.lastPlayTime > 0 ? 1 : -1;
-
-                        } else if (o1.lastPlayTime != null && o2.lastPlayTime == null) {
-                            return o1.lastPlayTime > 0 ? -1 : 1;
-
-                        } else if (o1.lastPlayTime != null && o2.lastPlayTime != null) {
-                            if (o1.lastPlayTime > 0 && o2.lastPlayTime <= 0) {
-                                return -1;
-
-                            } else if (o1.lastPlayTime <= 0 && o2.lastPlayTime > 0) {
-                                return 1;
-
-                            } else if (o1.lastPlayTime == 0 && o2.lastPlayTime == 0) {
-                                long o1Timestamp = getTimestamp(o1);
-                                long o2Timestamp = getTimestamp(o2);
-                                return o1Timestamp > o2Timestamp ? -1 : 1;
-
-                            } else {
-                                return o1.lastPlayTime > o2.lastPlayTime ? -1 : 1;
-                            }
-
-                        } else {
-                            long o1Timestamp = getTimestamp(o1);
-                            long o2Timestamp = getTimestamp(o2);
-                            return o1Timestamp > o2Timestamp ? -1 : 1;
-                        }
-                    }
-                }
-
-                private long getTimestamp(MyItemDataWrapper itemDataWrapper) {
-                    if (Build.VERSION.SDK_INT >= 9)
-                        return itemDataWrapper.installedGameInfo.lastUpdateTime;
-
-                    else
-                        return new File(itemDataWrapper.installedGameInfo.sourceDir).lastModified();
-                }
-            });
-
-        } else {
-            Collections.sort(itemDataWrapperList, new Comparator<MyItemDataWrapper>() {
-                @Override
-                public int compare(MyItemDataWrapper o1, MyItemDataWrapper o2) {
-                    long o1Timestamp = getTimestamp(o1);
-                    long o2Timestamp = getTimestamp(o2);
-                    return o1Timestamp > o2Timestamp ? -1 : 1;
-                }
-                private long getTimestamp(MyItemDataWrapper itemDataWrapper) {
-                    if (Build.VERSION.SDK_INT >= 9)
-                        return itemDataWrapper.installedGameInfo.lastUpdateTime;
-
-                    else
-                        return new File(itemDataWrapper.installedGameInfo.sourceDir).lastModified();
-                }
-            });
-        }
-    }
-
-    public static long getFirstInstallTime(InstalledGameInfo info) {
-        if (Build.VERSION.SDK_INT >= 9)
-            return info.firstInstallTime;
-
-        else
-            return new File(info.sourceDir).lastModified();
-    }
-
-    public static class MyItemDataWrapper {
-        public InstalledGameInfo installedGameInfo;
-        public boolean isNewGame = false;
-        public Long lastPlayTime;
-
-        public MyItemDataWrapper(InstalledGameInfo installedGameInfo) {
-            this.installedGameInfo = installedGameInfo;
-        }
-    }
 
     /**
      * 计算速度(数字)
@@ -2314,36 +1676,7 @@ public class Util {
             return false;
     }
 
-    public static boolean hasEnoughRamToPlayDemo() {
-        ActivityManager am = (ActivityManager) NineGameClientApplication.getInstance().getSystemService(Context.ACTIVITY_SERVICE);
-        ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
-        am.getMemoryInfo(memoryInfo);
 
-        final long playDemoMemoryByte = 90L * 1024 * 1024;// 运行试玩需要的内存
-        if (memoryInfo.availMem > (playDemoMemoryByte + memoryInfo.threshold)) {
-            return true;
-        }
-
-        return false;
-    }
-
-    /**
-     *判断是否有足够内存运行
-     * @param memory
-     * @return
-     */
-    public static boolean hasEnoughRamToPlay(long memory) {
-        ActivityManager am = (ActivityManager) NineGameClientApplication.getInstance().getSystemService(Context.ACTIVITY_SERVICE);
-        ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
-        am.getMemoryInfo(memoryInfo);
-
-        final long playDemoMemoryByte = memory * 1024 * 1024;// 运行试玩需要的内存
-        if (memoryInfo.availMem > (playDemoMemoryByte + memoryInfo.threshold)) {
-            return true;
-        }
-
-        return false;
-    }
 
 
     /**
@@ -2377,75 +1710,7 @@ public class Util {
         return 0;
     }
 
-    /**
-     * 调用系统InstalledAppDetails界面显示已安装应用程序的详细信息。
-     * 对于Android 2.3（Api Level 9）以上，使用SDK提供的接口； 2.3以下，使用非公开的接口（查看InstalledAppDetails源码）。
-     *
-     * @param context 上下文
-     * @param packageName  应用程序的包名
-     */
-    public static void showInstalledAppDetails(Context context, String packageName) {
-        final String SCHEME = "package";
-        /**
-         * 调用系统InstalledAppDetails界面所需的Extra名称(用于Android 2.1及之前版本)
-         */
-        final String APP_PKG_NAME_21 = "com.android.settings.ApplicationPkgName";
-        /**
-         * 调用系统InstalledAppDetails界面所需的Extra名称(用于Android 2.2)
-         */
-        final String APP_PKG_NAME_22 = "pkg";
-        /**
-         * InstalledAppDetails所在包名
-         */
-        final String APP_DETAILS_PACKAGE_NAME = "com.android.settings";
-        /**
-         * InstalledAppDetails类名
-         */
-        final String APP_DETAILS_CLASS_NAME = "com.android.settings.InstalledAppDetails";
 
-        Intent intent = new Intent();
-        final int apiLevel = Build.VERSION.SDK_INT;
-        if (apiLevel >= 9) { // 2.3（ApiLevel 9）以上，使用SDK提供的接口
-            intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-            Uri uri = Uri.fromParts(SCHEME, packageName, null);
-            intent.setData(uri);
-        } else { // 2.3以下，使用非公开的接口（查看InstalledAppDetails源码）
-            // 2.2和2.1中，InstalledAppDetails使用的APP_PKG_NAME不同。
-            final String appPkgName = (apiLevel == 8 ? APP_PKG_NAME_22
-                    : APP_PKG_NAME_21);
-            intent.setAction(Intent.ACTION_VIEW);
-            intent.setClassName(APP_DETAILS_PACKAGE_NAME,
-                    APP_DETAILS_CLASS_NAME);
-            intent.putExtra(appPkgName, packageName);
-        }
-        try {
-            if (context instanceof NineGameClientApplication) {
-                L.d("start pkg activity from application");
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            }
-            context.startActivity(intent);
-        } catch (Exception e) {
-            L.e(e);
-        }
-    }
-
-    public static void showMiuiInstalledAppDetails(Context context, String packageName) {
-        Intent intent = new Intent("miui.intent.action.APP_PERM_EDITOR");
-        String rom = getSystemProperty();
-        if ("V6".equals(rom)) {
-            intent.setClassName("com.miui.securitycenter", "com.miui.permcenter.permissions.AppPermissionsEditorActivity");
-            intent.putExtra("extra_pkgname", context.getPackageName());
-        } else {
-            showInstalledAppDetails(context,packageName);
-            return;
-        }
-        Activity ativity = PageSwitcher.peekActivityStack();
-        if (isIntentAvailable(ativity, intent)) {
-            ativity.startActivityForResult(intent, 2);
-        } else {
-            L.e("Intent is not available!");
-        }
-    }
 
     @TargetApi(9)
     /*public static void openAppDetailActivity(Context context, String packageName) {
@@ -2546,27 +1811,6 @@ public class Util {
         //return false;
     }
 
-    @TargetApi(Build.VERSION_CODES.KITKAT)
-    public static boolean checkOp(Context context, int op) {
-        final int version = Build.VERSION.SDK_INT;
-
-        if (version >= 19) {
-            AppOpsManager manager = (AppOpsManager) context.getSystemService(Context.APP_OPS_SERVICE);
-            try {
-                if (AppOpsManager.MODE_ALLOWED == (Integer)invokeMethod(manager, "checkOp", op,
-                        Binder.getCallingUid(), context.getPackageName())) {  //这儿反射就自己写吧
-                    return true;
-                } else {
-                    return false;
-                }
-            } catch (Exception e) {
-                L.e(e.getMessage());
-            }
-        } else {
-            L.e("Below API 19 cannot invoke!");
-        }
-        return false;
-    }
 
     private static Integer invokeMethod(AppOpsManager manager, String methodName, int op,
             int callingUid, String packageName) {
@@ -2794,193 +2038,5 @@ public class Util {
         return -1;
     }
 
-    /**
-     * 传入资源id大于0为正确的id，其它为错误id，此时对应的数据为空
-     *
-     * @param titleResId
-     * @param contentResId
-     * @param iconDrawableId
-     * @param duration
-     */
-    public static void showToastMessage(int titleResId, int contentResId, int iconDrawableId, int duration) {
-        Resources res = NineGameClientApplication.getInstance().getResources();
-        String title = res.getString(titleResId);
-        String content = contentResId > 0 ? res.getString(contentResId) : null;
-        showToastMessage(title, content, iconDrawableId, duration);
-    }
 
-    public static void showToastMessage(String title, String content, int iconDrawableId, int duration) {
-        AnimationsToastInfo info = new AnimationsToastInfo(title, content, duration, iconDrawableId, 0);
-        if (!ProcessManager.getInstance().isMainProcess()) {
-            BackProcMessenger.send(Message.Type.SHOW_ANIMATIONS_TOAST.ordinal(), info);
-        } else {
-            // 如果非特殊情况，主线程初始化,Toast在MainActivity初始化
-            MessagePump.getInstance().broadcastMessage(Message.Type.SHOW_ANIMATIONS_TOAST, info, Message.PRIORITY_NORMAL);
-        }
-    }
-
-    public static void showToastMessage(String title) {
-        if(TextUtils.isEmpty(title)) return;
-        Util.showToastMessage(title, null, CustomToast.NO_ICON, CustomToast.LENGTH_SHORT);
-    }
-
-    public static void showToastMessage(int titleRes) {
-        Util.showToastMessage(NineGameClientApplication.getInstance().getString(titleRes), null, CustomToast.NO_ICON, CustomToast.LENGTH_SHORT);
-    }
-
-    public static void showToastMessage(String title, int iconDrawableId) {
-        Util.showToastMessage(title, null, iconDrawableId, CustomToast.LENGTH_SHORT);
-    }
-
-    /***
-     * 判断是否需要去更新
-     **/
-    public static boolean needCheckNewVersion() {
-        boolean needCheck = false;
-
-        try {
-            boolean shouldCheckNewVersion = !BusinessUtil.isWmChannel(NineGameClientApplication.getInstance());
-            long sevenDays = 3600 * 1000 * 24 * 7;
-            long lastRejectUpgradeTimestamp = EnvironmentState.getInstance().getPreferences().getLong(SharePrefConstant.PREFS_KEY_LAST_REJECT_UPGRADE_TIMESTAMP, 0);
-
-            if (lastRejectUpgradeTimestamp == 0 || lastRejectUpgradeTimestamp + sevenDays < System.currentTimeMillis()) {
-                if (!shouldCheckNewVersion) {
-                    File dir = new File(NineGameClientApplication.getInstance().getPackageManager().getPackageInfo(NineGameClientApplication.getInstance().getPackageName(), 0).applicationInfo.sourceDir);
-                    String firstStartTimestampKey = "tmp_first_start_ts";
-                    long ts = EnvironmentState.getInstance().getPreferences().getLong(firstStartTimestampKey, 0);
-
-                    if (ts == 0 || ts < dir.lastModified()) {
-                        ts = System.currentTimeMillis();
-                        EnvironmentState.getInstance().getPreferences().edit().putLong(firstStartTimestampKey, ts).commit();
-                    }
-                    shouldCheckNewVersion = ts + sevenDays < System.currentTimeMillis();
-                }
-                // 安装后7天内不提示更新
-                if (shouldCheckNewVersion) {
-                    needCheck = true;
-                }
-            }
-
-        } catch (Exception e) {
-            L.w(e);
-        }
-
-        return needCheck;
-    }
-
-    public static synchronized String getUUID() {
-        String uuid = EnvironmentState.getInstance().getPreferences().getString(SharePrefConstant.PREFS_KEY_UUID, null);
-
-        if (uuid != null) {
-            return uuid;
-        }
-
-        uuid = UUID.randomUUID().toString();
-        EnvironmentState.getInstance().getPreferences().edit().putString(SharePrefConstant.PREFS_KEY_UUID, uuid).commit();
-        return uuid;
-    }
-
-    public static void genUUIDAndPostDeviceSpecs() {
-        getUUID();
-    }
-
-    public static void checkDeviceRootState() {
-        if (!EnvironmentState.getInstance().getPreferences().getBoolean(SharePrefConstant.PREFS_KEY_CHECKED_ROOT_STATE, false)) {
-            if (RootPrivilegeManager.isThisDeviceRooted()) {
-                BusinessStat.getInstance().addStat("root`1``");
-
-            } else {
-                BusinessStat.getInstance().addStat("root`0``");
-            }
-
-            EnvironmentState.getInstance().getPreferences().edit().putBoolean(SharePrefConstant.PREFS_KEY_CHECKED_ROOT_STATE, true).commit();
-        }
-    }
-
-    public static void deleteCachedImageFiles() {
-        TaskExecutor.executeTask(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    long curTimeStamp = System.currentTimeMillis() / 1000;
-                    File dir = BusinessUtil.getImageFilesDir(NineGameClientApplication.getInstance());
-                    String dirStr = dir.getAbsolutePath();
-                    String filePathArr[] = dir.list();
-
-                    for (int i = 0; i < filePathArr.length; ++i) {
-                        if (NativeUtil.lastAccessTime(dirStr + "/" + filePathArr[i]) + IMAGE_CACHE_TIME < curTimeStamp) {
-                            new File(dir, filePathArr[i]).delete();
-                        }
-                    }
-
-                } catch (Exception e) {
-                    L.w(e);
-                }
-            }
-        });
-
-    }
-
-
-    public static PendingIntent getOpenMainAppPendingIntent() {
-            Intent openMainAppIntent = new Intent(NineGameClientApplication.getInstance(), MainActivity.class);
-            openMainAppIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            openMainAppIntent.putExtra(MainActivity.INTENT_REQUEST, MainActivity.INTENT_REQUEST_JUMP_TO_MY_GAMES_DOWNLOAD_PAGE);
-            openMainAppIntent.setType("helloworld");
-            return PendingIntent.getActivity(NineGameClientApplication.getInstance(), 0, openMainAppIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-    }
-
-    /**
-     * 客户端启动就清除标识（标识用于从消息推送进入）
-     */
-    public static void clearNotificationsMark() {
-        BackgroundHandler.execute(new Runnable() {
-            @Override
-            public void run() {
-                SharedPreferences.Editor editor = EnvironmentState.getInstance().getPreferences().edit();
-                editor.remove(SharePrefConstant.PREFS_KEY_FROM_NOTIFICATIONS_UPGRADE);
-                editor.remove(SharePrefConstant.PREFS_KEY_FROM_NOTIFICATIONS_SPECIAL);
-                editor.remove(SharePrefConstant.PREFS_KEY_FROM_NOTIFICATIONS_DETAIL);
-                editor.remove(SharePrefConstant.PREFS_KEY_FROM_NOTIFICATIONS_ID);
-                editor.remove(SharePrefConstant.PREFS_KEY_FROM_NOTIFICATIONS_ALARM_TYPE_DETAIL);
-                editor.commit();
-                BusinessUtil.removedMsgId(editor);
-            }
-        });
-    }
-
-
-    public static boolean hasUserGuide() {
-        if (!NineGameClientApplication.getInstance().getResources().getBoolean(R.bool.has_user_guide)) {
-            return false;
-        }
-        String curVersionName = PackageUtil.getVersionName(NineGameClientApplication.getInstance());
-        String lastLaunchVerionName = EnvironmentState.getInstance().getSharedPrefenences(SharePrefConstant.SPLASH_SHARED_PREFERENCE_NAME).getString(SharePrefConstant.PREFS_LAST_LAUNCH_VERSION_NAME, null);
-        if (lastLaunchVerionName == null) {
-            return true;
-        } else if (curVersionName!=null && curVersionName.compareTo(lastLaunchVerionName) != 0) {
-            return true;
-        }
-        return false;
-    }
-
-    /**
-     * 获取NotificationManager
-     * @return
-     */
-    public static NotificationManager getNotificationManager() {
-        return (NotificationManager) NineGameClientApplication.getInstance().getSystemService(NineGameClientApplication.NOTIFICATION_SERVICE);
-
-    }
-
-    /**
-     * 截取字符串
-     * ***/
-    /*public static Object[] splitString(String text, String splitExp){
-        try {
-            return text.split(splitExp);
-        }catch (Exception ex){
-            return null;
-        }
-    }*/
 }

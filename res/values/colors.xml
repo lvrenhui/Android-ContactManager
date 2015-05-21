@@ -236,6 +236,8 @@
     <color name="guild_topic_comment_divider_color">#d3d3d3</color>
     <color name="guild_topic_comment_count_color">#666666</color>
     <color name="guild_topic_comment_count_checked_color">#ff8800</color>
+    <color name="guild_topic_comment_btn_divider_color">#d3d3d3</color>
+    <color name="guild_topic_comment_btn_divider_pressed_color">#ff8800</color>
     <color name="link_text_color">#488dbb</color>
     <color name="link_text_color_pressed">#ff05c5cf</color>
     <color name="menu_header_bg">#fff99722</color>

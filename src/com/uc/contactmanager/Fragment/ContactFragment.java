@@ -27,16 +27,16 @@ public class ContactFragment extends BaseFragment {
 
     }
 
-//    @Nullable
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//
-//        View view=inflater.inflate(R.layout.contact_page,null);
-//        ((TextView)view.findViewById(R.id.i_name)).setText("lvrh");
-//        ((TextView)view.findViewById(R.id.i_mobile)).setText("15018775638");
-//
-//        return view;
-//    }
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+        View mRootview=inflater.inflate(R.layout.contact_page,null);
+        ((TextView)mRootview.findViewById(R.id.i_name)).setText("lvrh");
+        ((TextView)mRootview.findViewById(R.id.i_mobile)).setText("15018775638");
+
+        return mRootview;
+    }
 
 
 }
